@@ -14,3 +14,23 @@ Although this is a new project, we have a few reasons for you to choose us as yo
 - **Many features**: Even though we are a new project we provide you with several commands to do whatever you want with your devices, go crazy!
 - **Advanced**: We offer advanced options for you, your experience will be the best possible.
 
+# Features
+We offer categories with some very useful options for management, like:
+
+👁️ **Monitoring**
+- Webcam photo (Save to the clipboard)
+- Remote desktop (control mouse & keyboard)
+- Live keylogger (Save logs)
+- Login manager (Save/Copy passwords)
+- Process Spy (Kill, suspend, restart, refresh, etc)
+- File manager (Upload, rename, open, delete, etc)
+
+😹 **Entertainment**
+- Notepad (Customize)
+- Screen direction (Reverse & normal)
+- Play sound (mp3 & wav)
+- Change wallpaper (Preview)
+- Crash pc (Administrator)
+- Screamer (Plugin)
+- Fun panel (Trap mouse, Shake mouse, Hide taskbar, etc)
+
