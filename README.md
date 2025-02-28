@@ -51,3 +51,23 @@ We offer categories with some very useful options for management, like:
 - Disconnect (Disconnect & delete)
 - Restart (Reopen)
 - Take notes (Auto-save)
+
+🐀 **RatonRAT**
+- Toggle sounds
+- Toggle notifications
+- Dark/Light mode
+
+🔩 **Builder**
+Builder
+- Save host
+- Save ports
+Client
+- Delayed execution (in seconds)
+- Custom icon (Injection)
+- Startup (Regedit)
+- Process critical (Administrator | BSOD on kill)
+- Hide file (Backup folder & Hidden)
+- Client group/tag (Identify)
+- Modify creation date (Any date)
+- Custom message box (Title, description & icon)
+- 
