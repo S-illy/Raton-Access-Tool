@@ -58,9 +58,11 @@ We offer categories with some very useful options for management, like:
 - Dark/Light mode
 
 🔩 **Builder**
+
 Builder
 - Save host
 - Save ports
+- DNS Support
   
 Client
 
