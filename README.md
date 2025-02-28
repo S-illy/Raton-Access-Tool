@@ -7,4 +7,4 @@
 </div>
 
 # Why you should choose RatonRAT
-Although this is a new project, we have a few reasons for you to choose us as your favorite rat. Obviously we will add more features in the future!
+Although this is a new project, we have a few reasons for you to choose us as your favorite rat. Obviously we will add more features in the future, we'd love to add your ideas, so feel free to suggest them.
