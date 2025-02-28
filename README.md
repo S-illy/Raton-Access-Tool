@@ -61,7 +61,9 @@ We offer categories with some very useful options for management, like:
 Builder
 - Save host
 - Save ports
+  
 Client
+
 - Delayed execution (in seconds)
 - Custom icon (Injection)
 - Startup (Regedit)
@@ -76,6 +78,7 @@ Client
 - UAC Prompt (If canceled, run anyway as user)
 - UAC Bypass (Force administrator exploiting fodhelper)
 - Block task manager (Close task manager, processxp, etc if detected)
+
 Assembly
 - Modify original file name
 - Modify product name
