@@ -110,7 +110,7 @@ Start today, its free as always, happy ratting! :)
 > Packet communication & login manager by nyan-x-cat
 > https://github.com/nyan-x-cat
 
-$ Legal disclaimer
+# Legal disclaimer
 
 This software is intended for educational, research, and system administration purposes only, in controlled environments. By using this tool, you agree that you are solely responsible for any actions taken with it. The creator of this software is not liable for any illegal, unauthorized, or malicious use.
 
@@ -120,6 +120,6 @@ By using this software, you acknowledge and accept these terms, and you take ful
 
 # Support, updates & donations
 Join the telegram for updates, contact me for support, and if you can, give me a donation! :)
-> **Telegram**: https://t.me/RatonTool
-> **Contact me**: https://t.me/DUMBASSsilly
-> **Give me a donation**: bc1qd2088hs8ajg9qv3m2f3p285e7r7ntmutygtux6 (BTC)
+- **Telegram**: https://t.me/RatonTool
+- **Contact me**: https://t.me/DUMBASSsilly
+- **Give me a donation**: bc1qd2088hs8ajg9qv3m2f3p285e7r7ntmutygtux6 (BTC)
