@@ -89,7 +89,7 @@ Assembly
 - Clone assembly
 
 # Developers
-You are a developer and would like to contribute in any way you can to make your presence useful?
+You are a developer and you would like to contribute in any way you can to make your presence useful?
 
 ♻️ **Pull request**
 - Coding errors? Correct them, and if all goes well, I will accept it and give you credits
@@ -99,3 +99,27 @@ You are a developer and would like to contribute in any way you can to make your
 📝 **Create a plugin**
 - Create a .dll with your code, make sure you have your main.cs file
 - Find more information on the wiki to build a custom UI
+
+# Download Raton Access Tool
+Start today, its free as always, happy ratting! :)
+<div style="text-align: center;">
+  <img src="https://i.ibb.co/wZXTN9kj/ad2.png" alt="RatonRAT">
+</div>
+
+> 😊 **Credits, legal and more silly stuff:**  
+> Packet communication & login manager by nyan-x-cat
+> https://github.com/nyan-x-cat
+
+$ Legal disclaimer
+
+This software is intended for educational, research, and system administration purposes only, in controlled environments. By using this tool, you agree that you are solely responsible for any actions taken with it. The creator of this software is not liable for any illegal, unauthorized, or malicious use.
+
+Using this tool on systems without explicit permission from the system owner is strictly prohibited and may lead to legal consequences, including civil and criminal penalties. The creator does not endorse or promote illegal activities, unauthorized hacking, espionage, or any form of malicious use.
+
+By using this software, you acknowledge and accept these terms, and you take full responsibility for how it is used.
+
+# Support, updates & donations
+Join the telegram for updates, contact me for support, and if you can, give me a donation! :)
+> **Telegram**: https://t.me/RatonTool
+> **Contact me**: https://t.me/DUMBASSsilly
+> **Give me a donation**: bc1qd2088hs8ajg9qv3m2f3p285e7r7ntmutygtux6 (BTC)
