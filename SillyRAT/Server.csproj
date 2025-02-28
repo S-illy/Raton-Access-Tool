@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73654329-FC79-4A6E-93AB-22AE751379BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RatonRAT</RootNamespace>
+    <AssemblyName>RatonRAT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\OneDrive\Escritorio\RatonRAT\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\OneDrive\Escritorio\RatonRAT\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ratt.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="dnlib, Version=4.4.0.0, Culture=neutral, PublicKeyToken=50e96378b6e77999, processorArchitecture=MSIL">
+      <HintPath>..\packages\dnlib.4.4.0\lib\net45\dnlib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Gmap.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.Net.1.0.1\lib\Gmap.net.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.7\lib\net472\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.7\lib\net472\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinPresentation.2.1.7\lib\net472\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.6\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.6\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.6\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.11.6.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.11.6\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vestris.ResourceLib, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vestris.ResourceLib.2.2.0\lib\net45\Vestris.ResourceLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CountryLocation.cs" />
+    <Compile Include="Classes\Lightmode.cs" />
+    <Compile Include="Classes\ResourceModifier.cs" />
+    <Compile Include="Classes\SFX.cs" />
+    <Compile Include="Classes\SwitchCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormBlockURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormBlockURL.Designer.cs">
+      <DependentUpon>FormBlockURL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormExecute.Designer.cs">
+      <DependentUpon>FormExecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormFile.Designer.cs">
+      <DependentUpon>FormFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormFileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormFileManager.Designer.cs">
+      <DependentUpon>FormFileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormPassword.Designer.cs">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormFun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormFun.Designer.cs">
+      <DependentUpon>FormFun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormKeylogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormKeylogger.Designer.cs">
+      <DependentUpon>FormKeylogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormPlugin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormPlugin.Designer.cs">
+      <DependentUpon>FormPlugin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormPorts.Designer.cs">
+      <DependentUpon>FormPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormSelect.Designer.cs">
+      <DependentUpon>FormSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormSound.Designer.cs">
+      <DependentUpon>FormSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormWallpaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormWallpaper.Designer.cs">
+      <DependentUpon>FormWallpaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormInformation.Designer.cs">
+      <DependentUpon>FormInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\Formproccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\Formproccess.Designer.cs">
+      <DependentUpon>Formproccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormProcessInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormProcessInfo.Designer.cs">
+      <DependentUpon>FormProcessInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormRemote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormRemote.Designer.cs">
+      <DependentUpon>FormRemote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormShell.Designer.cs">
+      <DependentUpon>FormShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormNotepad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormNotepad.Designer.cs">
+      <DependentUpon>FormNotepad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FormWebcam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FormWebcam.Designer.cs">
+      <DependentUpon>FormWebcam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\FornURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\FornURL.Designer.cs">
+      <DependentUpon>FornURL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForms\Notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForms\Notes.Designer.cs">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration.Designer.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection\Client.cs" />
+    <Compile Include="Connection\Listener.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangelog.Designer.cs">
+      <DependentUpon>FormChangelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSecurity.Designer.cs">
+      <DependentUpon>FormSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\HandleClient.cs" />
+    <Compile Include="Handlers\HandleCmd.cs" />
+    <Compile Include="Handlers\Handleinfo.cs" />
+    <Compile Include="Handlers\HandleKeylogger.cs" />
+    <Compile Include="Handlers\HandleManager.cs" />
+    <Compile Include="Handlers\HandlePacket.cs" />
+    <Compile Include="Handlers\HandlePassword.cs" />
+    <Compile Include="Handlers\HandlePort.cs" />
+    <Compile Include="Handlers\HandleProcess.cs" />
+    <Compile Include="Handlers\HandleRemote.cs" />
+    <Compile Include="Handlers\HandleUpload.cs" />
+    <Compile Include="Handlers\HandleWebcam.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientForms\FormBlockURL.resx">
+      <DependentUpon>FormBlockURL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormExecute.resx">
+      <DependentUpon>FormExecute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormFile.resx">
+      <DependentUpon>FormFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormFileManager.resx">
+      <DependentUpon>FormFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormPassword.resx">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormFun.resx">
+      <DependentUpon>FormFun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormKeylogger.resx">
+      <DependentUpon>FormKeylogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormPlugin.resx">
+      <DependentUpon>FormPlugin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormPorts.resx">
+      <DependentUpon>FormPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormSelect.resx">
+      <DependentUpon>FormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormSound.resx">
+      <DependentUpon>FormSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormWallpaper.resx">
+      <DependentUpon>FormWallpaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormInformation.resx">
+      <DependentUpon>FormInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\Formproccess.resx">
+      <DependentUpon>Formproccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormProcessInfo.resx">
+      <DependentUpon>FormProcessInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormRemote.resx">
+      <DependentUpon>FormRemote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormShell.resx">
+      <DependentUpon>FormShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormNotepad.resx">
+      <DependentUpon>FormNotepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FormWebcam.resx">
+      <DependentUpon>FormWebcam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\FornURL.resx">
+      <DependentUpon>FornURL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForms\Notes.resx">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration.resx">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangelog.resx">
+      <DependentUpon>FormChangelog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSecurity.resx">
+      <DependentUpon>FormSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ILMerge.props" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat_1f400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skjfskjdf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat_1f400-Photoroom-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat_1f400-Photoroom%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat_1f400-Photoroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rat_1f400-Photoroom%282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stuff\Stuff.csproj">
+      <Project>{18d25f2b-a8b5-4f69-97ee-fb4fed1e079f}</Project>
+      <Name>Stuff</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk_1f4be.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENGRANAJE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_1f4bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_1f4bb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blokiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENGRANAJE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_1f4bb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32758426.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-with-tears-of-joy_1f639.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tile_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\console.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ratt.ico" />
+    <Content Include="rat_1f400.ico" />
+    <None Include="Resources\enable.mp3" />
+    <None Include="Resources\disable.mp3" />
+    <None Include="Resources\Config.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\githubbb.png" />
+    <None Include="Resources\credit.png" />
+    <None Include="Resources\notification.mp3" />
+    <None Include="Resources\tgicon1.png" />
+    <None Include="Resources\btcicon.png" />
+    <None Include="Resources\kofiicon.png" />
+    <None Include="Resources\tgicon.png" />
+    <None Include="Resources\Agregar un subttulo%281%29.png" />
+    <None Include="Resources\sticky.png" />
+    <None Include="Resources\shitass.png" />
+    <None Include="Resources\1510_sin_titulo_20250221020528.png" />
+    <None Include="Resources\logoad.png" />
+    <None Include="Resources\skullll1.png" />
+    <None Include="Resources\u9eMTOhc.jpg" />
+    <None Include="Resources\ratt.png" />
+    <None Include="Resources\gradient.jpg" />
+    <None Include="Resources\click.mp3" />
+    <None Include="Resources\computerz.png" />
+    <None Include="Resources\dud.png" />
+    <None Include="Resources\ciber boi.gif" />
+    <None Include="Resources\mbox.png" />
+    <None Include="Resources\wifi.png" />
+    <None Include="Resources\dll.png" />
+    <None Include="Resources\skullll.png" />
+    <None Include="Resources\microstuff.png" />
+    <None Include="Resources\omicron.png" />
+    <None Include="Resources\detective.png" />
+    <None Include="Resources\micropjoe.png" />
+    <None Include="Resources\playsound.png" />
+    <None Include="Resources\Screamer.png" />
+    <None Include="Resources\script.png" />
+    <None Include="Resources\execute.png" />
+    <None Include="Resources\OS.png" />
+    <None Include="Resources\gpu.png" />
+    <None Include="Resources\tag.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\lockicon.png" />
+    <None Include="Resources\Priv.png" />
+    <None Include="Resources\clipboard.png" />
+    <None Include="Resources\clutter.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\meridian.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\icons8-world-96.png" />
+    <None Include="Resources\satel.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\administrator.png" />
+    <None Include="Resources\Hibernate.png" />
+    <None Include="Resources\defender.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\other.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\rat1.png" />
+    <None Include="Resources\exeicon.png" />
+    <None Include="Resources\FUNNY.png" />
+    <None Include="Resources\funpanel.png" />
+    <None Include="Resources\keyboardd.png" />
+    <None Include="Resources\Mousee.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\wallpaper.png" />
+    <None Include="Resources\icons8-heart-100.png" />
+    <None Include="Resources\dude.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\rattalkin.png" />
+    <None Include="Resources\rat_1f400%281%29.png" />
+    <None Include="Resources\speak.png" />
+    <None Include="Resources\tts.png" />
+    <None Include="Resources\update2.png" />
+    <None Include="Resources\remotedesk.png" />
+    <None Include="Resources\desktop.png" />
+    <None Include="Resources\cmd.png" />
+    <None Include="Resources\shine-removebg-preview.png" />
+    <None Include="Resources\glass.png" />
+    <None Include="Resources\remote.png" />
+    <None Include="Resources\update1.png" />
+    <None Include="Resources\SPACE.jpg" />
+    <None Include="Resources\quasarrrr.png" />
+    <None Include="Resources\rat_1f400-Photoroom1.png" />
+    <None Include="Resources\osak.jpg" />
+    <None Include="Resources\334588926e7552708e1b0a8ad56d8bb6.png" />
+    <None Include="Resources\minimal1.png" />
+    <None Include="Resources\minimal.png" />
+    <None Include="Resources\rat_1f400.ico" />
+    <None Include="Resources\rata.ico" />
+    <None Include="Resources\builder.png" />
+    <None Include="Resources\vertical.png" />
+    <None Include="Resources\horizontal.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\icons8-minus-90.png" />
+    <None Include="Resources\icons8-plus-90.png" />
+    <None Include="Resources\icons8-minus-100.png" />
+    <None Include="Resources\icons8-trash-96.png" />
+    <None Include="Resources\rat.png" />
+    <None Include="Resources\Admin.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
