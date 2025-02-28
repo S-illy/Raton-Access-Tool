@@ -34,3 +34,20 @@ We offer categories with some very useful options for management, like:
 - Screamer (Plugin)
 - Fun panel (Trap mouse, Shake mouse, Hide taskbar, etc)
 
+📦 **Other**
+- Plugin manager (For developers)
+- Hidden command prompt (Reverse shell)
+- Request administrator (UAC Prompt)
+- Visit URL (QX)
+- Execute code (VBS & Batch)
+- Message box (Customize)
+
+🛰️ **Network**
+- Open ports (UDP & TCP)
+- Block website (Administrator)
+- ARP Table (With reverse shell)
+
+🖥️ **Server**
+- Disconnect (Disconnect & delete)
+- Restart (Reopen)
+- Take notes (Auto-save)
