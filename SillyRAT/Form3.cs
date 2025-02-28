@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.IO;
@@ -699,6 +699,15 @@ namespace SillyRAT
 
         private void check_Tick(object sender, EventArgs e)
         {
+            if(checkBox10.Checked == true)
+            {
+                textBox4.Enabled = true;
+            }
+            else
+            {
+               textBox4.Enabled = false;
+            }
+
             if (checkBox6.Checked == true)
             {
                 comboBox1.Enabled = true;
