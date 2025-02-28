@@ -87,3 +87,15 @@ Assembly
 - Modify company
 - Modify trademark & copyright
 - Clone assembly
+
+# Developers
+You are a developer and would like to contribute in any way you can to make your presence useful?
+
+♻️ **Pull request**
+- Coding errors? Correct them, and if all goes well, I will accept it and give you credits
+- Spelling errors? Correct them and if everything looks correct, I will accept them
+- New features? Do them, I will test them and if everything looks good, they will be added, and obviously I will give you credits
+
+📝 **Create a plugin**
+- Create a .dll with your code, make sure you have your main.cs file
+- Find more information on the wiki to build a custom UI
