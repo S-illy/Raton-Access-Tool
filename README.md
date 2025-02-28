@@ -70,4 +70,15 @@ Client
 - Client group/tag (Identify)
 - Modify creation date (Any date)
 - Custom message box (Title, description & icon)
-- 
+- Open website (Any URL)
+- AntiVM (Virtual box & others)
+- Assist mode (The user can cancel the connection)
+- UAC Prompt (If canceled, run anyway as user)
+- UAC Bypass (Force administrator exploiting fodhelper)
+- Block task manager (Close task manager, processxp, etc if detected)
+Assembly
+- Modify original file name
+- Modify product name
+- Modify company
+- Modify trademark & copyright
+- Clone assembly
