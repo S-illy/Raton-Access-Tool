@@ -56,6 +56,7 @@ We offer categories with some very useful options for management, like:
 - Toggle sounds
 - Toggle notifications
 - Dark/Light mode
+- Custom wallpaper
 
 🔩 **Builder**
 
@@ -73,6 +74,7 @@ Client
 - Hide file (Backup folder & Hidden)
 - Client group/tag (Identify)
 - Modify creation date (Any date)
+- Protect client with password (For every action)
 - Custom message box (Title, description & icon)
 - Open website (Any URL)
 - AntiVM (Virtual box & others)
