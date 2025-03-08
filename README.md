@@ -1,6 +1,6 @@
 > ⚠️ **Warning:**  
 > This project is for personal use only. The author is not responsible for any misuse or damage caused by its use...
-> Also the updated source code will take more to upload, you are free to decompile it
+> Also the updated source code will take more to upload, you are free to decompile it (outdated)
 # Raton Access Tool
 **RatonRAT** is a Remote Access Tool (RAT) designed for remote administration between your devices. It provides full control over a system. With several features and a clean UI to provide the best user experience, as well as providing customization and a easy use for everybody. Your connection will be secure and encrypted with SSL. 🔒
 <div style="text-align: center;">
@@ -42,6 +42,8 @@ We offer categories with some very useful options for management, like:
 - Visit URL (QX)
 - Execute code (VBS & Batch)
 - Message box (Customize)
+- Chat (Control)
+- Screen locker (trapped mouse + custom form)
 
 🛰️ **Network**
 - Open ports (UDP & TCP)
@@ -58,7 +60,8 @@ We offer categories with some very useful options for management, like:
 - Toggle notifications
 - Dark/Light mode
 - Custom wallpaper
-
+- Client preview
+  
 🔩 **Builder**
 
 Builder
