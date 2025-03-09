@@ -19,6 +19,7 @@ Although this is a new project, we have a few reasons for you to choose us as yo
 We offer categories with some very useful options for management, like:
 
 👁️ **Monitoring**
+- Remote chat (w/ username)
 - Webcam photo (Save to the clipboard)
 - Remote desktop (control mouse & keyboard)
 - Live keylogger (Save logs)
@@ -42,7 +43,6 @@ We offer categories with some very useful options for management, like:
 - Visit URL (QX)
 - Execute code (VBS & Batch)
 - Message box (Customize)
-- Chat (Control)
 - Screen locker (trapped mouse + custom form)
 
 🛰️ **Network**
