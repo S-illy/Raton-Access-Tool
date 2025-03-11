@@ -41,7 +41,7 @@ We offer categories with some very useful options for management, like:
 - Hidden command prompt (Reverse shell)
 - Request administrator (UAC Prompt)
 - Visit URL (QX)
-- Execute code (VBS & Batch)
+- Execute code (VBS, Powershell & Batch)
 - Message box (Customize)
 - Screen locker (trapped mouse + custom form)
 
