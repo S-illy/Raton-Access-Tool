@@ -51,7 +51,8 @@ We offer categories with some very useful options for management, like:
 - ARP Table (With reverse shell)
 
 🖥️ **Server**
-- Disconnect (Disconnect & delete)
+- Disconnect (End process)
+- Uninstall (Uninstall app)
 - Restart (Reopen)
 - Take notes (Auto-save)
 
