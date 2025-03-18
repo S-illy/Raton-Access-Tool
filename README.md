@@ -18,8 +18,12 @@ Although this is a new project, we have a few reasons for you to choose us as yo
 # Features
 We offer categories with some very useful options for management, like:
 
+👆 **Client menu**
+- Client folder (Open the folder of the client)
+- Client information (Geo, pc, hardware, IP, etc)
+
 👁️ **Monitoring**
-- Remote chat (w/ username)
+- Remote chat (w/ username & username)
 - Webcam photo (Save to the clipboard)
 - Remote desktop (control mouse & keyboard)
 - Live keylogger (Save logs)
@@ -56,12 +60,17 @@ We offer categories with some very useful options for management, like:
 - Restart (Reopen)
 - Take notes (Auto-save)
 
+🕹️ **Dashboard**
+- Hide disconnected clients (Clear)
+- Select all (Multi)
+
 🐀 **RatonRAT**
 - Toggle sounds
 - Toggle notifications
 - Dark/Light mode
 - Custom wallpaper
 - Client preview
+- Local profile
   
 🔩 **Builder**
 
