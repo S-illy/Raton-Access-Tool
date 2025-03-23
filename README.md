@@ -48,6 +48,7 @@ We offer categories with some very useful options for management, like:
 - Execute code (VBS, Powershell & Batch)
 - Message box (Customize)
 - Screen locker (trapped mouse + custom form)
+- Clipboard manager 
 
 🛰️ **Network**
 - Open ports (UDP & TCP)
