@@ -29,7 +29,7 @@ We offer categories with some very useful options for management, like:
 - Live keylogger (Save logs)
 - Login manager (Save/Copy passwords)
 - Process Spy (Kill, suspend, restart, refresh, etc)
-- File manager (Upload, rename, open, delete, etc)
+- File manager (Upload, download, rename, open, delete, etc)
 
 😹 **Entertainment**
 - Notepad (Customize)
@@ -48,7 +48,8 @@ We offer categories with some very useful options for management, like:
 - Execute code (VBS, Powershell & Batch)
 - Message box (Customize)
 - Screen locker (trapped mouse + custom form)
-- Clipboard manager 
+- Clipboard manager
+- Remote execution
 
 🛰️ **Network**
 - Open ports (UDP & TCP)
@@ -72,6 +73,10 @@ We offer categories with some very useful options for management, like:
 - Custom wallpaper
 - Client preview
 - Local profile
+- Port checker
+- Monitor
+- Paint while you are waiting clients
+- Customize layour
   
 🔩 **Builder**
 
