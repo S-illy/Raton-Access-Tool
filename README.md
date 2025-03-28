@@ -30,7 +30,8 @@ We offer categories with some very useful options for management, like:
 - Login manager (Save/Copy passwords)
 - Process Spy (Kill, suspend, restart, refresh, etc)
 - File manager (Upload, download, rename, open, delete, etc)
-
+- Geo location by GPS (Get address)
+  
 😹 **Entertainment**
 - Notepad (Customize)
 - Screen direction (Reverse & normal)
