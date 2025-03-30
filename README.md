@@ -78,7 +78,7 @@ We offer categories with some very useful options for management, like:
 - Port checker
 - Monitor
 - Paint while you are waiting clients
-- Customize layour
+- Customize layout
   
 🔩 **Builder**
 
