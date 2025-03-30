@@ -40,7 +40,7 @@ We offer categories with some very useful options for management, like:
 - Crash pc (Administrator)
 - Screamer (Plugin)
 - Fun panel (Trap mouse, Shake mouse, Hide taskbar, etc)
-- GDI Effects (Dark, reverted colors)
+- GDI Effects (Dark, reverted colors, loop screen)
 
 📦 **Other**
 - Plugin manager (For developers)
