@@ -1,0 +1,14 @@
+C:\Users\Silly\OneDrive\Escritorio\RatonRAT\Builder\Template.exe.config
+C:\Users\Silly\OneDrive\Escritorio\RatonRAT\Builder\Template.exe
+C:\Users\Silly\OneDrive\Escritorio\RatonRAT\Builder\Template.pdb
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.Form1.resources
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Template.exe
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Template.pdb
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.Form2.resources
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.Form3.resources
+C:\Users\Silly\source\repos\SillyRAT\Client\obj\Debug\Client.Form4.resources

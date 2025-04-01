@@ -1,0 +1,1888 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Avalonia.Controls.ColorPicker</name>
+    </assembly>
+    <members>
+        <member name="T:Avalonia.Controls.AlphaComponentPosition">
+            <summary>
+            Defines the position of a color's alpha component relative to all other components.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.AlphaComponentPosition.Leading">
+            <summary>
+            The alpha component occurs before all other components.
+            </summary>
+            <remarks>
+            For example, this may indicate the #AARRGGBB or ARGB format which
+            is the default format for XAML itself and the Color struct.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.AlphaComponentPosition.Trailing">
+            <summary>
+            The alpha component occurs after all other components.
+            </summary>
+            <remarks>
+            For example, this may indicate the #RRGGBBAA or RGBA format which
+            is the default format for CSS.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.ColorChangedEventArgs">
+            <summary>
+            Holds the details of a ColorChanged event.
+            </summary>
+            <remarks>
+            HSV color information is intentionally not provided.
+            Use <see cref="M:Avalonia.Media.Color.ToHsv"/> to obtain it.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.ColorChangedEventArgs.#ctor(Avalonia.Media.Color,Avalonia.Media.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.ColorChangedEventArgs"/> class.
+            </summary>
+            <param name="oldColor">The old/original color from before the change event.</param>
+            <param name="newColor">The new/updated color that triggered the change event.</param>
+        </member>
+        <member name="P:Avalonia.Controls.ColorChangedEventArgs.OldColor">
+            <summary>
+            Gets the old/original color from before the change event.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorChangedEventArgs.NewColor">
+            <summary>
+            Gets the new/updated color that triggered the change event.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.ColorComponent">
+            <summary>
+            Defines a specific component within a color model.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorComponent.Alpha">
+            <summary>
+            Represents the alpha component.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorComponent.Component1">
+            <summary>
+            Represents the first color component which is Red when RGB or Hue when HSV.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorComponent.Component2">
+            <summary>
+            Represents the second color component which is Green when RGB or Saturation when HSV.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorComponent.Component3">
+            <summary>
+            Represents the third color component which is Blue when RGB or Value when HSV.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.ColorModel">
+            <summary>
+            Defines the model used to represent colors.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorModel.Hsva">
+            <summary>
+            Color is represented by hue, saturation, value and alpha components.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorModel.Rgba">
+            <summary>
+            Color is represented by red, green, blue and alpha components.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.FlatColorPalette">
+             <summary>
+             Implements a reduced flat design or flat UI color palette.
+             </summary>
+             <remarks>
+             See:
+              - https://htmlcolorcodes.com/color-chart/
+              - https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+              - http://designmodo.github.io/Flat-UI/
+            
+             The GitHub project is licensed as MIT: https://github.com/designmodo/Flat-UI.
+            
+             </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.FlatColorPalette.FlatColor">
+            <summary>
+            Defines all colors in the <see cref="T:Avalonia.Controls.FlatColorPalette"/>.
+            </summary>
+            <remarks>
+            This is done in an enum to ensure it is compiled into the assembly improving
+            startup performance.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.FlatColorPalette.InitColorChart">
+            <summary>
+            Initializes all color chart colors.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.FlatColorPalette.ColorCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:Avalonia.Controls.FlatColorPalette.ShadeCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.FlatColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.FlatHalfColorPalette">
+            <summary>
+            Implements half of the <see cref="T:Avalonia.Controls.FlatColorPalette"/> for improved usability.
+            </summary>
+            <inheritdoc cref="T:Avalonia.Controls.FlatColorPalette"/>
+        </member>
+        <member name="M:Avalonia.Controls.FlatHalfColorPalette.InitColorChart">
+            <summary>
+            Initializes all color chart colors.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.FlatHalfColorPalette.ColorCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:Avalonia.Controls.FlatHalfColorPalette.ShadeCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.FlatHalfColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.FluentColorPalette">
+            <summary>
+            Implements the standard Windows 10 color palette.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.FluentColorPalette.ColorCount">
+            <summary>
+            Gets the total number of colors in this palette.
+            A color is not necessarily a single value and may be composed of several shades.
+            This has little meaning in this palette as colors are not strictly separated.
+            </summary>
+            <inheritdoc path="/remarks"/>
+        </member>
+        <member name="P:Avalonia.Controls.FluentColorPalette.ShadeCount">
+            <summary>
+            Gets the total number of shades for each color in this palette.
+            Shades are usually a variation of the color lightening or darkening it.
+            This has little meaning in this palette as colors are not strictly separated by shade.
+            </summary>
+            <inheritdoc path="/remarks"/>
+        </member>
+        <member name="M:Avalonia.Controls.FluentColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.IColorPalette">
+            <summary>
+            Interface to define a color palette.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.IColorPalette.ColorCount">
+            <summary>
+            Gets the total number of colors in this palette.
+            A color is not necessarily a single value and may be composed of several shades.
+            </summary>
+            <remarks>
+            Represents total columns in a table.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.IColorPalette.ShadeCount">
+            <summary>
+            Gets the total number of shades for each color in this palette.
+            Shades are usually a variation of the color lightening or darkening it.
+            </summary>
+            <remarks>
+            Represents total rows in a table.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.IColorPalette.GetColor(System.Int32,System.Int32)">
+            <summary>
+            Gets a color in the palette by index.
+            </summary>
+            <param name="colorIndex">The index of the color in the palette.
+            The index must be between zero and <see cref="P:Avalonia.Controls.IColorPalette.ColorCount"/>.</param>
+            <param name="shadeIndex">The index of the color shade in the palette.
+            The index must be between zero and <see cref="P:Avalonia.Controls.IColorPalette.ShadeCount"/>.</param>
+            <returns>The color at the specified index or an exception.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.MaterialColorPalette">
+             <summary>
+             Implements a reduced version of the 2014 Material Design color palette.
+             </summary>
+             <remarks>
+             This palette is based on the one outlined here:
+            
+               https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+            
+             In order to make the palette uniform and rectangular the following
+             alterations were made:
+            
+              1. The A100-A700 shades of each color are excluded.
+                 These shades do not exist for all colors (brown/gray).
+              2. Black/White are stand-alone and are also excluded.
+            
+             </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.MaterialColorPalette.MaterialColor">
+            <summary>
+            Defines all colors in the <see cref="T:Avalonia.Controls.MaterialColorPalette"/>.
+            </summary>
+            <remarks>
+            This is done in an enum to ensure it is compiled into the assembly improving
+            startup performance.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.MaterialColorPalette.InitColorChart">
+            <summary>
+            Initializes all color chart colors.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.MaterialColorPalette.ColorCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:Avalonia.Controls.MaterialColorPalette.ShadeCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.MaterialColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.MaterialHalfColorPalette">
+            <summary>
+            Implements half of the <see cref="T:Avalonia.Controls.MaterialColorPalette"/> for improved usability.
+            </summary>
+            <inheritdoc cref="T:Avalonia.Controls.MaterialColorPalette"/>
+        </member>
+        <member name="M:Avalonia.Controls.MaterialHalfColorPalette.InitColorChart">
+            <summary>
+            Initializes all color chart colors.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.MaterialHalfColorPalette.ColorCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:Avalonia.Controls.MaterialHalfColorPalette.ShadeCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.MaterialHalfColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.SixteenColorPalette">
+            <summary>
+            Implements the standard sixteen color palette from the HTML 4.01 specification.
+            </summary>
+            <remarks>
+            See https://en.wikipedia.org/wiki/Web_colors#HTML_color_names.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.SixteenColorPalette.ColorCount">
+            <inheritdoc/>
+        </member>
+        <member name="P:Avalonia.Controls.SixteenColorPalette.ShadeCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.SixteenColorPalette.GetColor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.ColorPicker">
+            <summary>
+            Presents a color for user editing using a spectrum, palette and component sliders within a drop down.
+            Editing is available when the drop down flyout is opened; otherwise, only the preview content area is shown.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.ColorPicker"/> class.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorPicker.ContentProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorPicker.Content"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorPicker.ContentTemplateProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorPicker.ContentTemplate"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorPicker.HorizontalContentAlignmentProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorPicker.HorizontalContentAlignment"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorPicker.VerticalContentAlignmentProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorPicker.VerticalContentAlignment"/> property.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorPicker.Content">
+            <summary>
+            Gets or sets any content displayed in the ColorPicker's preview content area.
+            </summary>
+            <remarks>
+            By default this should show a preview of the currently selected color. 
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorPicker.ContentTemplate">
+            <summary>
+            Gets or sets the data template used to display the content of the ColorPicker's preview content area.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorPicker.HorizontalContentAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the content within the ColorPicker's preview content area.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorPicker.VerticalContentAlignment">
+            <summary>
+            Gets or sets the vertical alignment of the content within the ColorPicker's preview content area.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.ColorPreviewer">
+            <summary>
+            Presents a preview color with optional accent colors.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="E:Avalonia.Controls.Primitives.ColorPreviewer.ColorChanged">
+            <summary>
+            Event for when the selected color changes within the previewer.
+            This occurs when an accent color is pressed.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.ColorPreviewer"/> class.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.ConnectEvents(System.Boolean)">
+            <summary>
+            Connects or disconnects all control event handlers.
+            </summary>
+            <param name="connected">True to connect event handlers, otherwise false.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.OnApplyTemplate(Avalonia.Controls.Primitives.TemplateAppliedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.OnColorChanged(Avalonia.Controls.ColorChangedEventArgs)">
+            <summary>
+            Called before the <see cref="E:Avalonia.Controls.Primitives.ColorPreviewer.ColorChanged"/> event occurs.
+            </summary>
+            <param name="e">The <see cref="T:Avalonia.Controls.ColorChangedEventArgs"/> defining old/new colors.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPreviewer.AccentBorder_PointerPressed(System.Object,Avalonia.Input.PointerPressedEventArgs)">
+            <summary>
+            Event handler for when an accent color border is pressed.
+            This will update the color to the background of the pressed panel.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorPreviewer.HsvColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorPreviewer.HsvColor"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible"/> property.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorPreviewer.HsvColor">
+            <summary>
+            Gets or sets the currently previewed color in the HSV color model.
+            </summary>
+            <remarks>
+            Only an HSV color is supported in this control to ensure there is never any
+            loss of precision or color information. Accent colors, like the color spectrum,
+            only operate with the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible">
+            <summary>
+            Gets or sets a value indicating whether accent colors are visible along
+            with the preview color.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.ColorSlider">
+            <summary>
+            A slider with a background that represents a single color component.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="E:Avalonia.Controls.Primitives.ColorSlider.ColorChanged">
+            <summary>
+            Event for when the selected color changes within the slider.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.MaxHue">
+            <summary>
+            Defines the maximum hue component value
+            (other components are always 0..100 or 0.255).
+            </summary>
+            <remarks>
+            This should match the default <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue"/> property.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.ColorSlider"/> class.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.UpdatePseudoClasses">
+            <summary>
+            Updates the visual state of the control by applying latest PseudoClasses.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.UpdateBackground">
+            <summary>
+            Generates a new background image for the color slider and applies it.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.RoundComponentValues(Avalonia.Media.HsvColor)">
+            <summary>
+            Rounds the component values of the given <see cref="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor"/>.
+            This is useful for user-display and to ensure a color matches user selection exactly.
+            </summary>
+            <param name="hsvColor">The <see cref="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor"/> to round component values for.</param>
+            <returns>A new <see cref="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor"/> with rounded component values.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.SetColorToSliderValues">
+            <summary>
+            Updates the slider property values by applying the current color.
+            </summary>
+            <remarks>
+            Warning: This will trigger property changed updates.
+            Consider using <see cref="F:Avalonia.Controls.Primitives.ColorSlider.ignorePropertyChanged"/> externally.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.GetColorFromSliderValues">
+            <summary>
+            Gets the current color determined by the slider values.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.GetPerceptiveBackgroundColor(Avalonia.Media.HsvColor)">
+            <summary>
+            Gets the actual background color displayed for the given HSV color.
+            This can differ due to the effects of certain properties intended to improve perception.
+            </summary>
+            <param name="hsvColor">The actual color to get the equivalent background color for.</param>
+            <returns>The equivalent, perceived background color.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.GetPerceptiveBackgroundColor(Avalonia.Media.Color)">
+            <summary>
+            Gets the actual background color displayed for the given RGB color.
+            This can differ due to the effects of certain properties intended to improve perception.
+            </summary>
+            <param name="rgbColor">The actual color to get the equivalent background color for.</param>
+            <returns>The equivalent, perceived background color.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSlider.OnColorChanged(Avalonia.Controls.ColorChangedEventArgs)">
+            <summary>
+            Called before the <see cref="E:Avalonia.Controls.Primitives.ColorSlider.ColorChanged"/> event occurs.
+            </summary>
+            <param name="e">The <see cref="T:Avalonia.Controls.ColorChangedEventArgs"/> defining old/new colors.</param>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.ColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.Color"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.ColorComponentProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorComponent"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.ColorModelProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorModel"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.HsvColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.IsPerceptiveProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.IsPerceptive"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabledProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabled"/> property.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.Color">
+            <summary>
+            Gets or sets the currently selected color in the RGB color model.
+            </summary>
+            <remarks>
+            Use this property instead of <see cref="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor"/> when in <see cref="F:Avalonia.Controls.ColorModel.Rgba"/>
+            to avoid loss of precision and color drifting.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.ColorComponent">
+            <summary>
+            Gets or sets the color component represented by the slider.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.ColorModel">
+            <summary>
+            Gets or sets the active color model used by the slider.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.HsvColor">
+            <summary>
+            Gets or sets the currently selected color in the HSV color model.
+            </summary>
+            <remarks>
+            Use this property instead of <see cref="P:Avalonia.Controls.Primitives.ColorSlider.Color"/> when in <see cref="F:Avalonia.Controls.ColorModel.Hsva"/>
+            to avoid loss of precision and color drifting.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.IsAlphaVisible">
+            <summary>
+            Gets or sets a value indicating whether the alpha component is visible and rendered.
+            When false, this ensures that the gradient is always visible and never transparent regardless of
+            the actual color. This property is ignored when the alpha component itself is being displayed.
+            </summary>
+            <remarks>
+            Setting to false means the alpha component is always forced to maximum for components other than
+            <see cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorComponent"/> during rendering. This doesn't change the value of the alpha component
+            in the color – it is only for display.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.IsPerceptive">
+            <summary>
+            Gets or sets a value indicating whether the slider adapts rendering to improve user-perception
+            over exactness.
+            </summary>
+            <remarks>
+            When true in the HSVA color model, this ensures that the gradient is always visible and
+            never washed out regardless of the actual color. When true in the RGBA color model, this ensures
+            the gradient always appears as red, green or blue.
+            <br/><br/>
+            For example, with Hue in the HSVA color model, the Saturation and Value components are always forced
+            to maximum values during rendering. In the RGBA color model, all components other than
+            <see cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorComponent"/> are forced to minimum values during rendering.
+            <br/><br/>
+            Note this property will only adjust components other than <see cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorComponent"/> during rendering.
+            This also doesn't change the values of any components in the actual color – it is only for display.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSlider.IsRoundingEnabled">
+            <summary>
+            Gets or sets a value indicating whether rounding of color component values is enabled.
+            </summary>
+            <remarks>
+            This is applicable for the HSV color model only. The <see cref="T:Avalonia.Media.HsvColor"/> struct uses double
+            values while the <see cref="T:Avalonia.Media.Color"/> struct uses byte. Only double types need rounding.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.ColorSpectrum">
+            <summary>
+            A two dimensional spectrum for color selection.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="E:Avalonia.Controls.Primitives.ColorSpectrum.ColorChanged">
+            <summary>
+            Event for when the selected color changes within the spectrum.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> class.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnApplyTemplate(Avalonia.Controls.Primitives.TemplateAppliedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnAttachedToVisualTree(Avalonia.VisualTreeAttachmentEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnDetachedFromVisualTree(Avalonia.VisualTreeAttachmentEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.UnregisterEvents">
+            <summary>
+            Explicitly unregisters all events connected in OnApplyTemplate().
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnKeyDown(Avalonia.Input.KeyEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnGotFocus(Avalonia.Input.GotFocusEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnLostFocus(Avalonia.Interactivity.RoutedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnPointerExited(Avalonia.Input.PointerEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.UpdatePseudoClasses">
+            <summary>
+            Updates the visual state of the control by applying latest PseudoClasses.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.UpdateColor(Avalonia.Controls.Primitives.Hsv)">
+            <summary>
+            Changes the currently selected color (always in HSV) and applies all necessary updates.
+            </summary>
+            <remarks>
+            Some additional logic is applied in certain situations to coerce and sync color values.
+            Use this method instead of update the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Color"/> or <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor"/> directly.
+            </remarks>
+            <param name="newHsv">The new HSV color to change to.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.UpdateColorFromPoint(Avalonia.Input.PointerPoint)">
+            <summary>
+            Updates the selected <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor"/> and <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Color"/> based on a point within the color spectrum.
+            </summary>
+            <param name="point">The point on the spectrum representing the color.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.UpdateEllipse">
+            <summary>
+            Updates the position of the selection ellipse on the spectrum which indicates the selected color.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.InputTarget_PointerEntered(System.Object,Avalonia.Input.PointerEventArgs)">
+            <inheritdoc cref="E:Avalonia.Input.InputElement.PointerEntered"/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.InputTarget_PointerExited(System.Object,Avalonia.Input.PointerEventArgs)">
+            <inheritdoc cref="E:Avalonia.Input.InputElement.PointerExited"/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.InputTarget_PointerPressed(System.Object,Avalonia.Input.PointerPressedEventArgs)">
+            <inheritdoc cref="E:Avalonia.Input.InputElement.PointerPressed"/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.InputTarget_PointerMoved(System.Object,Avalonia.Input.PointerEventArgs)">
+            <inheritdoc cref="E:Avalonia.Input.InputElement.PointerMoved"/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.InputTarget_PointerReleased(System.Object,Avalonia.Input.PointerReleasedEventArgs)">
+            <inheritdoc cref="E:Avalonia.Input.InputElement.PointerReleased"/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorSpectrum.SelectionEllipseShouldBeLight">
+            <summary>
+            Determines whether the selection ellipse should be light based on the relative
+            luminance of the selected color.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.ColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Color"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.ComponentsProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Components"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.HsvColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MaxHueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturationProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MaxValueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MinHueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinHue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturationProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.MinValueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinValue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.ShapeProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Shape"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponentProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponent"/> property.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.Color">
+            <summary>
+            Gets or sets the currently selected color in the RGB color model.
+            </summary>
+            <remarks>
+            For control authors, use <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor"/> instead to avoid loss
+            of precision and color drifting.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.Components">
+            <summary>
+            Gets or sets the two HSV color components displayed by the spectrum.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor">
+            <summary>
+            Gets or sets the currently selected color in the HSV color model.
+            </summary>
+            <remarks>
+            This should be used in all cases instead of the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Color"/> property.
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model and using
+            this property will avoid loss of precision and color drifting.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue">
+            <summary>
+            Gets or sets the maximum value of the Hue component in the range from 0..359.
+            This property must be greater than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinHue"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation">
+            <summary>
+            Gets or sets the maximum value of the Saturation component in the range from 0..100.
+            This property must be greater than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue">
+            <summary>
+            Gets or sets the maximum value of the Value component in the range from 0..100.
+            This property must be greater than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinValue"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MinHue">
+            <summary>
+            Gets or sets the minimum value of the Hue component in the range from 0..359.
+            This property must be less than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation">
+            <summary>
+            Gets or sets the minimum value of the Saturation component in the range from 0..100.
+            This property must be less than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.MinValue">
+            <summary>
+            Gets or sets the minimum value of the Value component in the range from 0..100.
+            This property must be less than <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue"/>.
+            </summary>
+            <remarks>
+            Internally, the <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/> uses the HSV color model.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.Shape">
+            <summary>
+            Gets or sets the displayed shape of the spectrum.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorSpectrum.ThirdComponent">
+            <summary>
+            Gets the third HSV color component that is NOT displayed by the spectrum.
+            This is automatically calculated from the <see cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Components"/> property.
+            </summary>
+            <remarks>
+            This property should be used for any external color slider that represents the
+            third component of the color. Note that this property uses the generic
+            <see cref="T:Avalonia.Controls.ColorComponent"/> type instead of the more accurate <see cref="T:Avalonia.Controls.HsvComponent"/>
+            to allow direct usage by the generalized color sliders.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.Converters.AccentColorConverter">
+            <summary>
+            Creates an accent color for a given base color value and step parameter.
+            </summary>
+            <remarks>
+            This is a highly-specialized converter for the color picker.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Converters.AccentColorConverter.ValueDelta">
+            <summary>
+            The amount to change the Value component for each accent color step.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Converters.AccentColorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Converters.AccentColorConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Converters.AccentColorConverter.GetAccent(Avalonia.Media.HsvColor,System.Int32)">
+            <summary>
+            This does not account for perceptual differences and also does not match with
+            system accent color calculation.
+            </summary>
+            <remarks>
+            Use the HSV representation as it's more perceptual.
+            In most cases only the value is changed by a fixed percentage so the algorithm is reproducible.
+            </remarks>
+            <param name="hsvColor">The base color to calculate the accent from.</param>
+            <param name="accentStep">The number of accent color steps to move.</param>
+            <returns>The new accent color.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.Converters.ContrastBrushConverter">
+            <summary>
+            Gets a <see cref="T:Avalonia.Media.SolidColorBrush"/>, either black or white, depending on the luminance of the supplied color.
+            A default color supplied in the converter parameter may be returned if alpha is below the set threshold.
+            </summary>
+            <remarks>
+            This is a highly-specialized converter for the color picker.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.Converters.ContrastBrushConverter.AlphaThreshold">
+            <summary>
+            Gets or sets the alpha channel threshold below which a default color is used instead of black/white.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Converters.ContrastBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Converters.ContrastBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.ColorHelper">
+            <summary>
+            Contains helpers useful when working with colors.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorHelper.GetRelativeLuminance(Avalonia.Media.Color)">
+            <summary>
+            Gets the relative (perceptual) luminance/brightness of the given color.
+            1 is closer to white while 0 is closer to black.
+            </summary>
+            <param name="color">The color to calculate relative luminance for.</param>
+            <returns>The relative (perceptual) luminance/brightness of the given color.</returns>
+        </member>
+        <member name="P:Avalonia.Controls.Primitives.ColorHelper.ToDisplayNameExists">
+            <summary>
+            Determines if color display names are supported based on the current thread culture.
+            </summary>
+            <remarks>
+            Only English names are currently supported following known color names.
+            In the future known color names could be localized.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorHelper.ToDisplayName(Avalonia.Media.Color)">
+            <summary>
+            Determines an approximate display name for the given color.
+            </summary>
+            <param name="color">The color to get the display name for.</param>
+            <returns>The approximate color display name.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorHelper.GetDisplayName(Avalonia.Media.KnownColor)">
+            <summary>
+            Gets the human-readable display name for the given <see cref="T:Avalonia.Media.KnownColor"/>.
+            </summary>
+            <remarks>
+            This currently uses the <see cref="T:Avalonia.Media.KnownColor"/> enum value's C# name directly
+            which limits it to the EN language only. In the future this should be localized
+            to other cultures.
+            </remarks>
+            <param name="knownColor">The <see cref="T:Avalonia.Media.KnownColor"/> to get the display name for.</param>
+            <returns>The human-readable display name for the given <see cref="T:Avalonia.Media.KnownColor"/>.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.ColorPickerHelpers">
+            <summary>
+            Contains internal, special-purpose helpers used with the color picker.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPickerHelpers.CreateComponentBitmapAsync(Avalonia.Collections.Pooled.PooledList{System.Byte},System.Int32,System.Int32,Avalonia.Layout.Orientation,Avalonia.Controls.ColorModel,Avalonia.Controls.ColorComponent,Avalonia.Media.HsvColor,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a new bitmap of the specified size by changing a specific color component.
+            This will produce a gradient representing a sweep of all possible values of the color component.
+            </summary>
+            <param name="bgraPixelData">The target buffer which will contain the bitmap data on return.</param>
+            <param name="width">The pixel width (X, horizontal) of the resulting bitmap.</param>
+            <param name="height">The pixel height (Y, vertical) of the resulting bitmap.</param>
+            <param name="orientation">The orientation of the resulting bitmap (gradient direction).</param>
+            <param name="colorModel">The color model being used: RGBA or HSVA.</param>
+            <param name="component">The specific color component to sweep.</param>
+            <param name="baseHsvColor">The base HSV color used for components not being changed.</param>
+            <param name="isAlphaVisible">Whether the alpha component is visible and rendered in the bitmap.
+            This property is ignored when the alpha component itself is being rendered.</param>
+            <param name="isPerceptive">Whether the slider adapts rendering to improve user-perception over exactness.
+            This will ensure colors are always discernible.</param>
+            <returns>A new bitmap representing a gradient of color component values.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.ColorPickerHelpers.CreateBitmapFromPixelData(Avalonia.Collections.Pooled.PooledList{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Converts the given raw BGRA pre-multiplied alpha pixel data into a bitmap.
+            </summary>
+            <param name="bgraPixelData">The bitmap (in raw BGRA pre-multiplied alpha pixels).</param>
+            <param name="pixelWidth">The pixel width of the bitmap.</param>
+            <param name="pixelHeight">The pixel height of the bitmap.</param>
+            <returns>A new <see cref="T:Avalonia.Media.Imaging.WriteableBitmap"/>.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.Hsv">
+            <summary>
+            Contains and allows modification of Hue, Saturation and Value components.
+            </summary>
+            <remarks>
+              The is a specialized struct optimized for performance and memory:
+              <list type="bullet">
+                <item>This is not a read-only struct like <see cref="T:Avalonia.Media.HsvColor"/> and allows editing the fields</item>
+                <item>Removes the alpha component unnecessary in core calculations</item>
+                <item>No component bounds checks or clamping is done.</item>
+              </list>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Hsv.H">
+            <summary>
+            The Hue component in the range from 0..359.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Hsv.S">
+            <summary>
+            The Saturation component in the range from 0..1.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Hsv.V">
+            <summary>
+            The Value component in the range from 0..1.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Hsv.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.Hsv"/> struct.
+            </summary>
+            <param name="h">The Hue component in the range from 0..360.</param>
+            <param name="s">The Saturation component in the range from 0..1.</param>
+            <param name="v">The Value component in the range from 0..1.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Hsv.#ctor(Avalonia.Media.HsvColor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.Hsv"/> struct.
+            </summary>
+            <param name="hsvColor">An existing <see cref="T:Avalonia.Media.HsvColor"/> to convert to <see cref="T:Avalonia.Controls.Primitives.Hsv"/>.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Hsv.ToHsvColor(System.Double)">
+            <summary>
+            Converts this <see cref="T:Avalonia.Controls.Primitives.Hsv"/> struct into a standard <see cref="T:Avalonia.Media.HsvColor"/>.
+            </summary>
+            <param name="alpha">The Alpha component in the range from 0..1.</param>
+            <returns>A new <see cref="T:Avalonia.Media.HsvColor"/> representing this <see cref="T:Avalonia.Controls.Primitives.Hsv"/> struct.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Hsv.ToRgb">
+            <summary>
+            Returns the <see cref="T:Avalonia.Controls.Primitives.Rgb"/> color model equivalent of this <see cref="T:Avalonia.Controls.Primitives.Hsv"/> color.
+            </summary>
+            <returns>The <see cref="T:Avalonia.Controls.Primitives.Rgb"/> equivalent color.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.IncrementAmount">
+            <summary>
+            Defines a relative amount that a color component should be incremented.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.IncrementAmount.Small">
+            <summary>
+            A smaller change in value.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.IncrementAmount.Large">
+            <summary>
+            A larger change in value.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.IncrementDirection">
+            <summary>
+            Defines the direction a color component should be incremented.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.IncrementDirection.Lower">
+            <summary>
+            Decreasing in value towards zero.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.IncrementDirection.Higher">
+            <summary>
+            Increasing in value towards positive infinity.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.Primitives.Rgb">
+            <summary>
+            Contains and allows modification of Red, Green and Blue components.
+            </summary>
+            <remarks>
+              The is a specialized struct optimized for performance and memory:
+              <list type="bullet">
+                <item>This is not a read-only struct like <see cref="T:Avalonia.Media.Color"/> and allows editing the fields</item>
+                <item>Removes the alpha component unnecessary in core calculations</item>
+                <item>Normalizes RGB components in the range of 0..1 to simplify calculations.</item>
+                <item>No component bounds checks or clamping is done.</item>
+              </list>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Rgb.R">
+            <summary>
+            The Red component in the range from 0..1.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Rgb.G">
+            <summary>
+            The Green component in the range from 0..1.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.Primitives.Rgb.B">
+            <summary>
+            The Blue component in the range from 0..1.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Rgb.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.Rgb"/> struct.
+            </summary>
+            <param name="r">The Red component in the range from 0..1.</param>
+            <param name="g">The Green component in the range from 0..1.</param>
+            <param name="b">The Blue component in the range from 0..1.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Rgb.#ctor(Avalonia.Media.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.Primitives.Rgb"/> struct.
+            </summary>
+            <param name="color">An existing <see cref="T:Avalonia.Media.Color"/> to convert to <see cref="T:Avalonia.Controls.Primitives.Rgb"/>.</param>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Rgb.ToColor(System.Double)">
+            <summary>
+            Converts this <see cref="T:Avalonia.Controls.Primitives.Rgb"/> struct into a standard <see cref="T:Avalonia.Media.Color"/>.
+            </summary>
+            <param name="alpha">The Alpha component in the range from 0..1.</param>
+            <returns>A new <see cref="T:Avalonia.Media.Color"/> representing this <see cref="T:Avalonia.Controls.Primitives.Rgb"/> struct.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Primitives.Rgb.ToHsv">
+            <summary>
+            Returns the <see cref="T:Avalonia.Controls.Primitives.Hsv"/> color model equivalent of this <see cref="T:Avalonia.Controls.Primitives.Rgb"/> color.
+            </summary>
+            <returns>The <see cref="T:Avalonia.Controls.Primitives.Hsv"/> equivalent color.</returns>
+        </member>
+        <member name="T:Avalonia.Controls.ColorSpectrumComponents">
+            <summary>
+            Defines the two HSV color components displayed by a <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/>.
+            </summary>
+            <remarks>
+            Order of the color components is important and correspond with an X/Y axis in Box
+            shape or a degree/radius in Ring shape.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.HueValue">
+            <summary>
+            The Hue and Value components.
+            </summary>
+            <remarks>
+            In Box shape, Hue is mapped to the X-axis and Value is mapped to the Y-axis.
+            In Ring shape, Hue is mapped to degrees and Value is mapped to radius.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.ValueHue">
+            <summary>
+            The Value and Hue components.
+            </summary>
+            <remarks>
+            In Box shape, Value is mapped to the X-axis and Hue is mapped to the Y-axis.
+            In Ring shape, Value is mapped to degrees and Hue is mapped to radius.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.HueSaturation">
+            <summary>
+            The Hue and Saturation components.
+            </summary>
+            <remarks>
+            In Box shape, Hue is mapped to the X-axis and Saturation is mapped to the Y-axis.
+            In Ring shape, Hue is mapped to degrees and Saturation is mapped to radius.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.SaturationHue">
+            <summary>
+            The Saturation and Hue components.
+            </summary>
+            <remarks>
+            In Box shape, Saturation is mapped to the X-axis and Hue is mapped to the Y-axis.
+            In Ring shape, Saturation is mapped to degrees and Hue is mapped to radius.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.SaturationValue">
+            <summary>
+            The Saturation and Value components.
+            </summary>
+            <remarks>
+            In Box shape, Saturation is mapped to the X-axis and Value is mapped to the Y-axis.
+            In Ring shape, Saturation is mapped to degrees and Value is mapped to radius.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumComponents.ValueSaturation">
+            <summary>
+            The Value and Saturation components.
+            </summary>
+            <remarks>
+            In Box shape, Value is mapped to the X-axis and Saturation is mapped to the Y-axis.
+            In Ring shape, Value is mapped to degrees and Saturation is mapped to radius.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.ColorSpectrumShape">
+            <summary>
+            Defines the shape of a <see cref="T:Avalonia.Controls.Primitives.ColorSpectrum"/>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumShape.Box">
+            <summary>
+            The spectrum is in the shape of a rectangular or square box.
+            Note that more colors are visible to the user in Box shape.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorSpectrumShape.Ring">
+            <summary>
+            The spectrum is in the shape of an ellipse or circle.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.ColorView">
+            <summary>
+            Presents a color for user editing using a spectrum, palette and component sliders.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="E:Avalonia.Controls.ColorView.ColorChanged">
+            <summary>
+            Event for when the selected color changes within the slider.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Avalonia.Controls.ColorView"/> class.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.GetColorFromHexTextBox">
+            <summary>
+            Gets the value of the hex TextBox and sets it as the current <see cref="P:Avalonia.Controls.ColorView.Color"/>.
+            If invalid, the TextBox hex text will revert back to the last valid color.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.SetColorToHexTextBox">
+            <summary>
+            Sets the current <see cref="P:Avalonia.Controls.ColorView.Color"/> to the hex TextBox.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.ValidateSelection">
+            <summary>
+            Validates the tab/panel/page selection taking into account the visibility of each item
+            as well as the current selection.
+            </summary>
+            <remarks>
+            Derived controls may re-implement this based on their default style / control template
+            and any specialized selection needs.
+            </remarks>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.OnApplyTemplate(Avalonia.Controls.Primitives.TemplateAppliedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.OnPropertyChanged(Avalonia.AvaloniaPropertyChangedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.OnColorChanged(Avalonia.Controls.ColorChangedEventArgs)">
+            <summary>
+            Called before the <see cref="E:Avalonia.Controls.ColorView.ColorChanged"/> event occurs.
+            </summary>
+            <param name="e">The <see cref="T:Avalonia.Controls.ColorChangedEventArgs"/> defining old/new colors.</param>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.OnCoerceColor(Avalonia.Media.Color)">
+            <summary>
+            Called when the <see cref="P:Avalonia.Controls.ColorView.Color"/> property has to be coerced.
+            </summary>
+            <param name="value">The value to coerce.</param>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.OnCoerceHsvColor(Avalonia.Media.HsvColor)">
+            <summary>
+            Called when the <see cref="P:Avalonia.Controls.ColorView.HsvColor"/> property has to be coerced.
+            </summary>
+            <param name="value">The value to coerce.</param>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.CoerceColor(Avalonia.AvaloniaObject,Avalonia.Media.Color)">
+            <summary>
+            Coerces/validates the <see cref="P:Avalonia.Controls.ColorView.Color"/> property value.
+            </summary>
+            <param name="instance">The <see cref="T:Avalonia.Controls.ColorView"/> instance.</param>
+            <param name="value">The value to coerce.</param>
+            <returns>The coerced/validated value.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.CoerceHsvColor(Avalonia.AvaloniaObject,Avalonia.Media.HsvColor)">
+            <summary>
+            Coerces/validates the <see cref="P:Avalonia.Controls.ColorView.HsvColor"/> property value.
+            </summary>
+            <param name="instance">The <see cref="T:Avalonia.Controls.ColorView"/> instance.</param>
+            <param name="value">The value to coerce.</param>
+            <returns>The coerced/validated value.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.HexTextBox_KeyDown(System.Object,Avalonia.Input.KeyEventArgs)">
+            <summary>
+            Event handler for when a key is pressed within the Hex RGB value TextBox.
+            This is used to trigger re-evaluation of the color based on the TextBox value.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.ColorView.HexTextBox_LostFocus(System.Object,Avalonia.Interactivity.RoutedEventArgs)">
+            <summary>
+            Event handler for when the Hex RGB value TextBox looses focus.
+            This is used to trigger re-evaluation of the color based on the TextBox value.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.ColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.Color"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.ColorModelProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.ColorModel"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.ColorSpectrumComponentsProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.ColorSpectrumComponents"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.ColorSpectrumShapeProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.ColorSpectrumShape"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.HexInputAlphaPositionProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.HexInputAlphaPosition"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.HsvColorProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.HsvColor"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsAccentColorsVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsAccentColorsVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsAlphaEnabledProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsAlphaEnabled"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsAlphaVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsAlphaVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorComponentsVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorComponentsVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorModelVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorModelVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorPaletteVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorPaletteVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorPreviewVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorPreviewVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorSpectrumVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorSpectrumVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsColorSpectrumSliderVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsColorSpectrumSliderVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsComponentSliderVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsComponentSliderVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsComponentTextInputVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsComponentTextInputVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.IsHexInputVisibleProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.IsHexInputVisible"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MaxHueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MaxHue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MaxSaturationProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MaxSaturation"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MaxValueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MaxValue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MinHueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MinHue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MinSaturationProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MinSaturation"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.MinValueProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.MinValue"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.PaletteColorsProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.PaletteColors"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.PaletteColumnCountProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.PaletteColumnCount"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.PaletteProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.Palette"/> property.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorView.SelectedIndexProperty">
+            <summary>
+            Defines the <see cref="P:Avalonia.Controls.ColorView.SelectedIndex"/> property.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.Color">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Color"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.ColorModel">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSlider.ColorModel"/>
+            <remarks>
+            This property is only applicable to the components tab.
+            The spectrum tab must always be in HSV and the palette tab contains only pre-defined colors.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.ColorSpectrumComponents">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Components"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.ColorSpectrumShape">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.Shape"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.HexInputAlphaPosition">
+            <summary>
+            Gets or sets the position of the alpha component in the hexadecimal input box relative to
+            all other color components.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.HsvColor">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.HsvColor"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsAccentColorsVisible">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorPreviewer.IsAccentColorsVisible"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsAlphaEnabled">
+            <summary>
+            Gets or sets a value indicating whether the alpha component is enabled.
+            When disabled (set to false) the alpha component will be fixed to maximum and
+            editing controls disabled.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsAlphaVisible">
+            <summary>
+            Gets or sets a value indicating whether the alpha component editing controls
+            (Slider(s) and TextBox) are visible. When hidden, the existing alpha component
+            value is maintained.
+            </summary>
+            <remarks>
+            Note that <see cref="P:Avalonia.Controls.ColorView.IsComponentTextInputVisible"/> also controls the alpha
+            component TextBox visibility.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorComponentsVisible">
+            <summary>
+            Gets or sets a value indicating whether the color components tab/panel/page (subview) is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorModelVisible">
+            <summary>
+            Gets or sets a value indicating whether the active color model indicator/selector is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorPaletteVisible">
+            <summary>
+            Gets or sets a value indicating whether the color palette tab/panel/page (subview) is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorPreviewVisible">
+            <summary>
+            Gets or sets a value indicating whether the color preview is visible.
+            </summary>
+            <remarks>
+            Note that accent color visibility is controlled separately by
+            <see cref="P:Avalonia.Controls.ColorView.IsAccentColorsVisible"/>.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorSpectrumVisible">
+            <summary>
+            Gets or sets a value indicating whether the color spectrum tab/panel/page (subview) is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsColorSpectrumSliderVisible">
+            <summary>
+            Gets or sets a value indicating whether the color spectrum's third component slider
+            is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsComponentSliderVisible">
+            <summary>
+            Gets or sets a value indicating whether color component sliders are visible.
+            </summary>
+            <remarks>
+            All color components are controlled by this property but alpha can also be
+            controlled with <see cref="P:Avalonia.Controls.ColorView.IsAlphaVisible"/>.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsComponentTextInputVisible">
+            <summary>
+            Gets or sets a value indicating whether color component text inputs are visible.
+            </summary>
+            <remarks>
+            All color components are controlled by this property but alpha can also be
+            controlled with <see cref="P:Avalonia.Controls.ColorView.IsAlphaVisible"/>.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.IsHexInputVisible">
+            <summary>
+            Gets or sets a value indicating whether the hexadecimal color value text input
+            is visible.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MaxHue">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxHue"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MaxSaturation">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxSaturation"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MaxValue">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MaxValue"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MinHue">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinHue"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MinSaturation">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinSaturation"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.MinValue">
+            <inheritdoc cref="P:Avalonia.Controls.Primitives.ColorSpectrum.MinValue"/>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.PaletteColors">
+            <summary>
+            Gets or sets the collection of individual colors in the palette.
+            </summary>
+            <remarks>
+            This is not commonly set manually. Instead, it should be set automatically by
+            providing an <see cref="T:Avalonia.Controls.IColorPalette"/> to the <see cref="P:Avalonia.Controls.ColorView.Palette"/> property.
+            <br/><br/>
+            Also note that this property is what should be bound in the control template.
+            <see cref="P:Avalonia.Controls.ColorView.Palette"/> is too high-level to use on its own.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.PaletteColumnCount">
+            <summary>
+            Gets or sets the number of colors in each row (section) of the color palette.
+            Within a standard palette, rows are shades and columns are colors.
+            </summary>
+            <remarks>
+            This is not commonly set manually. Instead, it should be set automatically by
+            providing an <see cref="T:Avalonia.Controls.IColorPalette"/> to the <see cref="P:Avalonia.Controls.ColorView.Palette"/> property.
+            <br/><br/>
+            Also note that this property is what should be bound in the control template.
+            <see cref="P:Avalonia.Controls.ColorView.Palette"/> is too high-level to use on its own.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.Palette">
+            <summary>
+            Gets or sets the color palette.
+            </summary>
+            <remarks>
+            This will automatically set both <see cref="P:Avalonia.Controls.ColorView.PaletteColors"/> and
+            <see cref="P:Avalonia.Controls.ColorView.PaletteColumnCount"/> overwriting any existing values.
+            </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.ColorView.SelectedIndex">
+            <summary>
+            Gets or sets the index of the selected tab/panel/page (subview).
+            </summary>
+            <remarks>
+            When using the default control theme, this property is designed to be used with the
+            <see cref="T:Avalonia.Controls.ColorViewTab"/> enum. The <see cref="T:Avalonia.Controls.ColorViewTab"/> enum defines the
+            index values of each of the three standard tabs.
+            Use like `SelectedIndex = (int)ColorViewTab.Palette`.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.ColorViewTab">
+            <summary>
+            Defines a specific tab/page (subview) within the <see cref="T:Avalonia.Controls.ColorView"/>.
+            </summary>
+            <remarks>
+            This is indexed to match the default control template ordering.
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.ColorViewTab.Spectrum">
+            <summary>
+            The color spectrum subview with a box/ring spectrum and sliders.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorViewTab.Palette">
+            <summary>
+            The color palette subview with a grid of selectable colors.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.ColorViewTab.Components">
+            <summary>
+            The components subview with sliders and numeric input boxes.
+            </summary>
+        </member>
+        <member name="T:Avalonia.Controls.Converters.ColorToDisplayNameConverter">
+            <summary>
+            Gets the approximated display name for the color.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToDisplayNameConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToDisplayNameConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.Converters.ColorToHexConverter">
+            <summary>
+            Converts a color to a hex string and vice versa.
+            </summary>
+        </member>
+        <member name="P:Avalonia.Controls.Converters.ColorToHexConverter.IsAlphaVisible">
+             <summary>
+             Gets or sets a value indicating whether the alpha component is visible in the Hex formatted text.
+             </summary>
+             <remarks>
+             When hidden the existing alpha component value is maintained. Also when hidden the user is still
+             able to input an 8-digit number with alpha. Alpha will be processed but then removed when displayed.
+            
+             Because this property only controls whether alpha is displayed (and it is still processed regardless)
+             it is termed 'Visible' instead of 'Enabled'.
+             </remarks>
+        </member>
+        <member name="P:Avalonia.Controls.Converters.ColorToHexConverter.AlphaPosition">
+            <summary>
+            Gets or sets the position of a color's alpha component relative to all other components.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToHexConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToHexConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToHexConverter.ToHexString(Avalonia.Media.Color,Avalonia.Controls.AlphaComponentPosition,System.Boolean,System.Boolean)">
+            <summary>
+            Converts the given color to its hex color value string representation.
+            </summary>
+            <param name="color">The color to represent as a hex value string.</param>
+            <param name="alphaPosition">The output position of the alpha component.</param>
+            <param name="includeAlpha">Whether the alpha component will be included in the hex string.</param>
+            <param name="includeSymbol">Whether the hex symbol '#' will be added.</param>
+            <returns>The input color converted to its hex value string.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToHexConverter.ParseHexString(System.String,Avalonia.Controls.AlphaComponentPosition)">
+            <summary>
+            Parses a hex color value string into a new <see cref="T:Avalonia.Media.Color"/>.
+            </summary>
+            <param name="hexColor">The hex color string to parse.</param>
+            <param name="alphaPosition">The input position of the alpha component.</param>
+            <returns>The parsed <see cref="T:Avalonia.Media.Color"/>; otherwise, null.</returns>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ColorToHexConverter.TryParseHexFormat(System.ReadOnlySpan{System.Char},Avalonia.Controls.AlphaComponentPosition,Avalonia.Media.Color@)">
+            <summary>
+            Parses the given span of characters representing a hex color value into a new <see cref="T:Avalonia.Media.Color"/>.
+            </summary>
+            <remarks>
+            This is based on the Color.TryParseHexFormat() method.
+            It is copied because it needs to be extended to handle alpha position.
+            However, the alpha position enum is only available in the controls namespace with the ColorPicker control.
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.Converters.DoNothingForNullConverter">
+            <summary>
+            Converter that will do nothing (not update bound values) when a null value is encountered.
+            This converter enables binding nullable with non-nullable properties in some scenarios.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.DoNothingForNullConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.DoNothingForNullConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.Converters.ToBrushConverter">
+            <summary>
+            Converts the given value into an <see cref="T:Avalonia.Media.IBrush"/> when a conversion is possible.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ToBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ToBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.Converters.ToColorConverter">
+            <summary>
+            Converts the given value into a <see cref="T:Avalonia.Media.Color"/> when a conversion is possible.
+            </summary>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ToColorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Avalonia.Controls.Converters.ToColorConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Avalonia.Controls.HsvComponent">
+            <summary>
+            Defines a specific component in the HSV color model.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.HsvComponent.Alpha">
+            <summary>
+            The Alpha component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.HsvColor.A"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.HsvComponent.Hue">
+            <summary>
+            The Hue component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.HsvColor.H"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.HsvComponent.Saturation">
+            <summary>
+            The Saturation component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.HsvColor.S"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.HsvComponent.Value">
+            <summary>
+            The Value component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.HsvColor.V"/>
+            </remarks>
+        </member>
+        <member name="T:Avalonia.Controls.RgbComponent">
+            <summary>
+            Defines a specific component in the RGB color model.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Controls.RgbComponent.Alpha">
+            <summary>
+            The Alpha component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.Color.A"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.RgbComponent.Red">
+            <summary>
+            The Red component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.Color.R"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.RgbComponent.Green">
+            <summary>
+            The Green component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.Color.G"/>
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Controls.RgbComponent.Blue">
+            <summary>
+            The Blue component.
+            </summary>
+            <remarks>
+            Also see: <see cref="P:Avalonia.Media.Color.B"/>
+            </remarks>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>Specifies that an output will not be null even if the corresponding type allows it. Specifies that an input argument was not null when the call returns.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter may be null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with the associated parameter name.</summary>
+            <param name="parameterName">
+            The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>Gets the associated parameter name.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>Applied to a method that will never return under any circumstance.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified parameter value.</summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+            the associated parameter matches this value.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>Gets the condition parameter value.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute">
+            <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with a field or property member.</summary>
+            <param name="member">
+            The field or property member that is promised to be not-null.
+            </param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])">
+            <summary>Initializes the attribute with the list of field and property members.</summary>
+            <param name="members">
+            The list of field and property members that are promised to be not-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members">
+            <summary>Gets field or property member names.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute">
+            <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values when returning with the specified return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)">
+            <summary>Initializes the attribute with the specified return value condition and a field or property member.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+            <param name="member">
+            The field or property member that is promised to be not-null.
+            </param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])">
+            <summary>Initializes the attribute with the specified return value condition and list of field and property members.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+            <param name="members">
+            The list of field and property members that are promised to be not-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members">
+            <summary>Gets field or property member names.</summary>
+        </member>
+    </members>
+</doc>

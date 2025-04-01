@@ -1,0 +1,6 @@
+C:\Users\Silly\OneDrive\Escritorio\RatonRAT\Stuff.dll
+C:\Users\Silly\OneDrive\Escritorio\RatonRAT\Stuff.pdb
+C:\Users\Silly\source\repos\SillyRAT\Stuff\obj\Release\Stuff.csproj.CoreCompileInputs.cache
+C:\Users\Silly\source\repos\SillyRAT\Stuff\obj\Release\Stuff.dll
+C:\Users\Silly\source\repos\SillyRAT\Stuff\obj\Release\Stuff.pdb
+C:\Users\Silly\source\repos\SillyRAT\Stuff\obj\Release\Stuff.csproj.AssemblyReference.cache

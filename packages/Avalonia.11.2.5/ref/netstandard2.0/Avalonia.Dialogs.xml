@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Avalonia.Dialogs</name>
+    </assembly>
+    <members>
+        <member name="P:Avalonia.Dialogs.ManagedFileDialogOptions.CustomVolumeInfoProvider">
+            <summary>
+            Allows to redefine how root volumes are populated in the dialog. 
+            </summary>
+        </member>
+        <member name="P:Avalonia.Dialogs.ManagedFileDialogOptions.ContentRootFactory">
+            <summary>
+            Allows to redefine content root.
+            Can be a custom Window or any ContentControl (Popup hosted).   
+            </summary>
+        </member>
+    </members>
+</doc>

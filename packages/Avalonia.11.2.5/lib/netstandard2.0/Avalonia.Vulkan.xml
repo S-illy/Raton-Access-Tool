@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Avalonia.Vulkan</name>
+    </assembly>
+    <members>
+        <member name="P:Avalonia.Vulkan.VulkanInstanceCreationOptions.ApplicationName">
+            <summary>
+            Sets the application name of the vulkan instance
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanInstanceCreationOptions.VulkanVersion">
+            <summary>
+            Specifies the vulkan api version to use
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanInstanceCreationOptions.InstanceExtensions">
+            <summary>
+            Specifies additional extensions to enable if available on the instance
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanInstanceCreationOptions.EnabledLayers">
+            <summary>
+            Specifies layers to enable if available on the instance
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanInstanceCreationOptions.UseDebug">
+            <summary>
+            Enables the debug layer
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanDeviceCreationOptions.DeviceExtensions">
+            <summary>
+            Specifies extensions to enable if available on the logical device
+            </summary>
+        </member>
+        <member name="P:Avalonia.Vulkan.VulkanDeviceCreationOptions.PreferDiscreteGpu">
+            <summary>
+            Selects the first suitable discrete gpu available
+            </summary>
+        </member>
+    </members>
+</doc>

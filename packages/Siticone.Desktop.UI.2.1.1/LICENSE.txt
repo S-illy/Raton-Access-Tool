@@ -1,0 +1,59 @@
+Siticone Desktop UI | End User License Agreement (EULA):
+
+Please read this document carefully.
+
+For more information:
+1. Visit: https://www.siticoneframework.com/legal
+2. Ask us anything: support@siticoneframework.com
+
+
+Licenses:
+The license key is per developer basis. This means that each developer will have a unique license key which activates a base miximum of two(2) devices. This is the base or starting activation maximum limit. Devices can be added according to the subscription type.
+
+The base premium duration is 12months or 1 year. This is the base subscription period, and can be added upto 10 years.
+
+Collaborations:
+If you are collaborating with another developer, you are allowed to have two devices activated with the same activation code (for as long as the activation does not exceed the maximum allowed by your license type).
+
+To see the license types, please visit: https://www.siticoneframework.com/pricing
+
+Subscriptions:
+All subscriptions are annual (or per year basis), starting from the date of purchase. There are no hidden costs, no deployment costs, no royalty costs.
+
+No run time limitations:
+When the activation code expires, all compiled projects including deployed apps, systems, software, etc. will continue to function without any license notices nor disruptions
+
+Feature updates and major upgrades:
+Feature updates and major/minor upgrades will be made available to all subscriptions free of charge within their active subscription period.
+
+Source code:
+We do not provide the product source code. All Siticone Framework Products including Siticone Desktop UI are closed source.
+
+Royalties and distribution:
+You are not required to pay any royalties for applications you make and deploy using our library. You can sell and distribute applications royalty free, as long as you desire! No attribution is required.
+
+Resettings and transfers:
+If you buy a new PC or need to transfer your license to another machine, you can use your license key to manage (activate, deactivate and reactivate) your subscription. If you need more information about this please reach us at: support@siticoneframework.com
+
+Post expiry usage:
+Your compiled applications will continue running even after your subscription has expired. However, you will not be able to edit your projects in design time.
+
+Bug fixing:
+All discovered bugs will be handled on case by case basis which will dictate the timeframe for resolving each reported bug. You are free to report bugs to: support@siticoneframework.com
+
+Free trials and evaluation:
+We provide a 14-day free trial and evaluation period, to all users. Upon trial expiry, you will need to purchase a premium license to continue using the product. You can see our reasonable pricng plans at: https://www.siticoneframework.com/pricing
+
+Activation process:
+All activations are done online. This means that you will need an active, undisrupted and stable internet connection to activate your premium key and subscription. There are no offline activations. During activation process we will collect personal info such as your email, unique device identifiers, etc so that we activate your key and identify your device successfully. When you proceed with activation, it means you have granted us full rights to access these relevant bits of information about you, your license and your device. If you need more information, please contact us at: support@siticoneframework.com. You can also read our privacy policy at: https://www.siticoneframework.com/legal
+
+Licensing changes:
+We reserve the right to modify the licensing terms, conditions and any other license related information from time to time without prior notice. Please regularly visit this section of the website: https://www.siticoneframework.com/legal to keep yourself up-to-date with our latest terms.
+
+For more information:
+1. Visit: https://www.siticoneframework.com/legal
+2. Contact us at: support@siticoneframework.com
+
+Thank you for reading this document.
+
+Happy UI/UX development!

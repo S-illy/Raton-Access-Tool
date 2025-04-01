@@ -1,0 +1,2035 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Avalonia.Remote.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:Avalonia.Remote.Protocol.Input.InputModifiers">
+            <summary>
+            Keep this in sync with InputModifiers in the main library
+            </summary>
+        </member>
+        <member name="T:Avalonia.Remote.Protocol.Input.MouseButton">
+            <summary>
+            Keep this in sync with InputModifiers in the main library
+            </summary>
+        </member>
+        <member name="T:Avalonia.Remote.Protocol.Input.Key">
+            <summary>
+            Defines the keys available on a keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.None">
+            <summary>
+            No key pressed.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Cancel">
+            <summary>
+            The Cancel key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Back">
+            <summary>
+            The Back key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Tab">
+            <summary>
+            The Tab key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LineFeed">
+            <summary>
+            The Linefeed key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Clear">
+            <summary>
+            The Clear key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Return">
+            <summary>
+            The Return key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Enter">
+            <summary>
+            The Enter key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Pause">
+            <summary>
+            The Pause key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.CapsLock">
+            <summary>
+            The Caps Lock key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Capital">
+            <summary>
+            The Caps Lock key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.HangulMode">
+            <summary>
+            The IME Hangul mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.KanaMode">
+            <summary>
+            The IME Kana mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.JunjaMode">
+            <summary>
+            The IME Junja mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.FinalMode">
+            <summary>
+            The IME Final mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.KanjiMode">
+            <summary>
+            The IME Kanji mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.HanjaMode">
+            <summary>
+            The IME Hanja mode key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Escape">
+            <summary>
+            The Escape key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ImeConvert">
+            <summary>
+            The IME Convert key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ImeNonConvert">
+            <summary>
+            The IME NonConvert key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ImeAccept">
+            <summary>
+            The IME Accept key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ImeModeChange">
+            <summary>
+            The IME Mode change key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Space">
+            <summary>
+            The space bar.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.PageUp">
+            <summary>
+            The Page Up key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Prior">
+            <summary>
+            The Page Up key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.PageDown">
+            <summary>
+            The Page Down key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Next">
+            <summary>
+            The Page Down key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.End">
+            <summary>
+            The End key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Home">
+            <summary>
+            The Home key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Left">
+            <summary>
+            The Left arrow key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Up">
+            <summary>
+            The Up arrow key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Right">
+            <summary>
+            The Right arrow key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Down">
+            <summary>
+            The Down arrow key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Select">
+            <summary>
+            The Select key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Print">
+            <summary>
+            The Print key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Execute">
+            <summary>
+            The Execute key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Snapshot">
+            <summary>
+            The Print Screen key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.PrintScreen">
+            <summary>
+            The Print Screen key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Insert">
+            <summary>
+            The Insert key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Delete">
+            <summary>
+            The Delete key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Help">
+            <summary>
+            The Help key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D0">
+            <summary>
+            The 0 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D1">
+            <summary>
+            The 1 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D2">
+            <summary>
+            The 2 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D3">
+            <summary>
+            The 3 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D4">
+            <summary>
+            The 4 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D5">
+            <summary>
+            The 5 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D6">
+            <summary>
+            The 6 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D7">
+            <summary>
+            The 7 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D8">
+            <summary>
+            The 8 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D9">
+            <summary>
+            The 9 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.A">
+            <summary>
+            The A key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.B">
+            <summary>
+            The B key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.C">
+            <summary>
+            The C key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.D">
+            <summary>
+            The D key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.E">
+            <summary>
+            The E key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F">
+            <summary>
+            The F key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.G">
+            <summary>
+            The G key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.H">
+            <summary>
+            The H key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.I">
+            <summary>
+            The I key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.J">
+            <summary>
+            The J key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.K">
+            <summary>
+            The K key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.L">
+            <summary>
+            The L key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.M">
+            <summary>
+            The M key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.N">
+            <summary>
+            The N key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.O">
+            <summary>
+            The O key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.P">
+            <summary>
+            The P key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Q">
+            <summary>
+            The Q key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.R">
+            <summary>
+            The R key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.S">
+            <summary>
+            The S key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.T">
+            <summary>
+            The T key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.U">
+            <summary>
+            The U key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.V">
+            <summary>
+            The V key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.W">
+            <summary>
+            The W key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.X">
+            <summary>
+            The X key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Y">
+            <summary>
+            The Y key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Z">
+            <summary>
+            The Z key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LWin">
+            <summary>
+            The left Windows key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.RWin">
+            <summary>
+            The right Windows key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Apps">
+            <summary>
+            The Application key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Sleep">
+            <summary>
+            The Sleep key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad0">
+            <summary>
+            The 0 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad1">
+            <summary>
+            The 1 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad2">
+            <summary>
+            The 2 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad3">
+            <summary>
+            The 3 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad4">
+            <summary>
+            The 4 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad5">
+            <summary>
+            The 5 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad6">
+            <summary>
+            The 6 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad7">
+            <summary>
+            The 7 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad8">
+            <summary>
+            The 8 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumPad9">
+            <summary>
+            The 9 key on the numeric keypad.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Multiply">
+            <summary>
+            The Multiply key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Add">
+            <summary>
+            The Add key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Separator">
+            <summary>
+            The Separator key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Subtract">
+            <summary>
+            The Subtract key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Decimal">
+            <summary>
+            The Decimal key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Divide">
+            <summary>
+            The Divide key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F1">
+            <summary>
+            The F1 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F2">
+            <summary>
+            The F2 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F3">
+            <summary>
+            The F3 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F4">
+            <summary>
+            The F4 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F5">
+            <summary>
+            The F5 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F6">
+            <summary>
+            The F6 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F7">
+            <summary>
+            The F7 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F8">
+            <summary>
+            The F8 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F9">
+            <summary>
+            The F9 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F10">
+            <summary>
+            The F10 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F11">
+            <summary>
+            The F11 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F12">
+            <summary>
+            The F12 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F13">
+            <summary>
+            The F13 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F14">
+            <summary>
+            The F14 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F15">
+            <summary>
+            The F15 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F16">
+            <summary>
+            The F16 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F17">
+            <summary>
+            The F17 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F18">
+            <summary>
+            The F18 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F19">
+            <summary>
+            The F19 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F20">
+            <summary>
+            The F20 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F21">
+            <summary>
+            The F21 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F22">
+            <summary>
+            The F22 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F23">
+            <summary>
+            The F23 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.F24">
+            <summary>
+            The F24 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NumLock">
+            <summary>
+            The Numlock key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Scroll">
+            <summary>
+            The Scroll key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LeftShift">
+            <summary>
+            The left Shift key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.RightShift">
+            <summary>
+            The right Shift key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LeftCtrl">
+            <summary>
+            The left Ctrl key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.RightCtrl">
+            <summary>
+            The right Ctrl key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LeftAlt">
+            <summary>
+            The left Alt key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.RightAlt">
+            <summary>
+            The right Alt key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserBack">
+            <summary>
+            The browser Back key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserForward">
+            <summary>
+            The browser Forward key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserRefresh">
+            <summary>
+            The browser Refresh key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserStop">
+            <summary>
+            The browser Stop key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserSearch">
+            <summary>
+            The browser Search key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserFavorites">
+            <summary>
+            The browser Favorites key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.BrowserHome">
+            <summary>
+            The browser Home key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.VolumeMute">
+            <summary>
+            The Volume Mute key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.VolumeDown">
+            <summary>
+            The Volume Down key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.VolumeUp">
+            <summary>
+            The Volume Up key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaNextTrack">
+            <summary>
+            The media Next Track key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaPreviousTrack">
+            <summary>
+            The media Previous Track key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaStop">
+            <summary>
+            The media Stop key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaPlayPause">
+            <summary>
+            The media Play/Pause key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LaunchMail">
+            <summary>
+            The Launch Mail key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.SelectMedia">
+            <summary>
+            The Select Media key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LaunchApplication1">
+            <summary>
+            The Launch Application 1 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.LaunchApplication2">
+            <summary>
+            The Launch Application 2 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemSemicolon">
+            <summary>
+            The OEM Semicolon key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem1">
+            <summary>
+            The OEM 1 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemPlus">
+            <summary>
+            The OEM Plus key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemComma">
+            <summary>
+            The OEM Comma key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemMinus">
+            <summary>
+            The OEM Minus key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemPeriod">
+            <summary>
+            The OEM Period key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemQuestion">
+            <summary>
+            The OEM Question Mark key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem2">
+            <summary>
+            The OEM 2 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemTilde">
+            <summary>
+            The OEM Tilde key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem3">
+            <summary>
+            The OEM 3 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.AbntC1">
+            <summary>
+            The ABNT_C1 (Brazilian) key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.AbntC2">
+            <summary>
+            The ABNT_C2 (Brazilian) key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemOpenBrackets">
+            <summary>
+            The OEM Open Brackets key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem4">
+            <summary>
+            The OEM 4 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemPipe">
+            <summary>
+            The OEM Pipe key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem5">
+            <summary>
+            The OEM 5 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemCloseBrackets">
+            <summary>
+            The OEM Close Brackets key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem6">
+            <summary>
+            The OEM 6 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemQuotes">
+            <summary>
+            The OEM Quotes key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem7">
+            <summary>
+            The OEM 7 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem8">
+            <summary>
+            The OEM 8 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemBackslash">
+            <summary>
+            The OEM Backslash key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Oem102">
+            <summary>
+            The OEM 3 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ImeProcessed">
+            <summary>
+            A special key masking the real key being processed by an IME.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.System">
+            <summary>
+            A special key masking the real key being processed as a system key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemAttn">
+            <summary>
+            The OEM ATTN key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeAlphanumeric">
+            <summary>
+            The DBE_ALPHANUMERIC key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemFinish">
+            <summary>
+            The OEM Finish key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeKatakana">
+            <summary>
+            The DBE_KATAKANA key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeHiragana">
+            <summary>
+            The DBE_HIRAGANA key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemCopy">
+            <summary>
+            The OEM Copy key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeSbcsChar">
+            <summary>
+            The DBE_SBCSCHAR key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemAuto">
+            <summary>
+            The OEM Auto key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeDbcsChar">
+            <summary>
+            The DBE_DBCSCHAR key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemEnlw">
+            <summary>
+            The OEM ENLW key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemBackTab">
+            <summary>
+            The OEM BackTab key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeRoman">
+            <summary>
+            The DBE_ROMAN key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeNoRoman">
+            <summary>
+            The DBE_NOROMAN key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Attn">
+            <summary>
+            The ATTN key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.CrSel">
+            <summary>
+            The CRSEL key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeEnterWordRegisterMode">
+            <summary>
+            The DBE_ENTERWORDREGISTERMODE key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.ExSel">
+            <summary>
+            The EXSEL key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeEnterImeConfigureMode">
+            <summary>
+            The DBE_ENTERIMECONFIGMODE key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.EraseEof">
+            <summary>
+            The ERASE EOF Key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeFlushString">
+            <summary>
+            The DBE_FLUSHSTRING key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Play">
+            <summary>
+            The Play key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeCodeInput">
+            <summary>
+            The DBE_CODEINPUT key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeNoCodeInput">
+            <summary>
+            The DBE_NOCODEINPUT key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Zoom">
+            <summary>
+            The Zoom key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.NoName">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeDetermineString">
+            <summary>
+            The DBE_DETERMINESTRING key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DbeEnterDialogConversionMode">
+            <summary>
+            The DBE_ENTERDLGCONVERSIONMODE key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.Pa1">
+            <summary>
+            The PA1 key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.OemClear">
+            <summary>
+            The OEM Clear key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.DeadCharProcessed">
+            <summary>
+            The key is used with another key to create a single combined character.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.FnLeftArrow">
+            <summary>
+            OSX Platform-specific Fn+Left key
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.FnRightArrow">
+            <summary>
+            OSX Platform-specific Fn+Right key
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.FnUpArrow">
+            <summary>
+            OSX Platform-specific Fn+Up key
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.FnDownArrow">
+            <summary>
+            OSX Platform-specific Fn+Down key
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaHome">
+            <summary>
+            Remove control home button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaChannelList">
+            <summary>
+            TV Channel up
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaChannelRaise">
+            <summary>
+            TV Channel up
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaChannelLower">
+            <summary>
+            TV Channel down
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaRecord">
+            <summary>
+            TV Channel down
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaRed">
+            <summary>
+            Remote control Red button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaGreen">
+            <summary>
+            Remote control Green button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaYellow">
+            <summary>
+            Remote control Yellow button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaBlue">
+            <summary>
+            Remote control Blue button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaMenu">
+            <summary>
+            Remote control Menu button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaMore">
+            <summary>
+            Remote control dots button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaOption">
+            <summary>
+            Remote control option button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaInfo">
+            <summary>
+            Remote control channel info button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaSearch">
+            <summary>
+            Remote control search button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaSubtitle">
+            <summary>
+            Remote control subtitle/caption button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaTvGuide">
+            <summary>
+            Remote control Tv guide detail button
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.Key.MediaPreviousChannel">
+            <summary>
+            Remote control Previous Channel
+            </summary>
+        </member>
+        <member name="T:Avalonia.Remote.Protocol.Input.PhysicalKey">
+            <summary>
+            Represents a keyboard physical key.<br/>
+            </summary>
+            <remarks>
+            The names follow the W3C codes: https://www.w3.org/TR/uievents-code/
+            </remarks>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.None">
+            <summary>
+            Represents no key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Backquote">
+            <summary>
+            <c>`~</c> on a US keyboard.
+            This is the <c>半角/全角/漢字</c> (hankaku/zenkaku/kanji) key on Japanese keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Backslash">
+            <summary>
+            Used for both the US <c>\|</c> (on the 101-key layout) and also for the key located between the <c>"</c> and
+            <c>Enter</c> keys on row C of the 102-, 104- and 106-key layouts.
+            <c>#~</c> on a UK (102) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BracketLeft">
+            <summary>
+            <c>[{</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BracketRight">
+            <summary>
+            <c>]}</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Comma">
+            <summary>
+            <c>,&lt;</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit0">
+            <summary>
+            <c>0)</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit1">
+            <summary>
+            <c>1!</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit2">
+            <summary>
+            <c>2@</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit3">
+            <summary>
+            <c>3#</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit4">
+            <summary>
+            <c>4$</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit5">
+            <summary>
+            <c>5%</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit6">
+            <summary>
+            <c>6^</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit7">
+            <summary>
+            <c>7&amp;</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit8">
+            <summary>
+            <c>8*</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Digit9">
+            <summary>
+            <c>9(</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Equal">
+            <summary>
+            <c>=+</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.IntlBackslash">
+            <summary>
+            Located between the left <c>Shift</c> and <c>Z</c> keys.
+            <c>\|</c> on a UK keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.IntlRo">
+            <summary>
+            Located between the <c>/</c> and right <c>Shift</c> keys.
+            <c>\ろ</c> (ro) on a Japanese keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.IntlYen">
+            <summary>
+            Located between the <c>=</c> and <c>Backspace</c> keys.
+            <c>¥</c> (yen) on a Japanese keyboard.
+            <c>\/</c> on a Russian keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.A">
+            <summary>
+            <c>a</c> on a US keyboard.
+            <c>q</c> on an AZERTY (e.g., French) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.B">
+            <summary>
+            <c>b</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.C">
+            <summary>
+            <c>c</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.D">
+            <summary>
+            <c>d</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.E">
+            <summary>
+            <c>e</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F">
+            <summary>
+            <c>f</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.G">
+            <summary>
+            <c>g</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.H">
+            <summary>
+            <c>h</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.I">
+            <summary>
+            <c>i</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.J">
+            <summary>
+            <c>j</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.K">
+            <summary>
+            <c>k</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.L">
+            <summary>
+            <c>l</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.M">
+            <summary>
+            <c>m</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.N">
+            <summary>
+            <c>n</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.O">
+            <summary>
+            <c>o</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.P">
+            <summary>
+            <c>p</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Q">
+            <summary>
+            <c>q</c> on a US keyboard.
+            <c>a</c> on an AZERTY (e.g., French) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.R">
+            <summary>
+            <c>r</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.S">
+            <summary>
+            <c>s</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.T">
+            <summary>
+            <c>t</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.U">
+            <summary>
+            <c>u</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.V">
+            <summary>
+            <c>v</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.W">
+            <summary>
+            <c>w</c> on a US keyboard.
+            <c>z</c> on an AZERTY (e.g., French) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.X">
+            <summary>
+            <c>x</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Y">
+            <summary>
+            <c>y</c> on a US keyboard.
+            <c>z</c> on a QWERTZ (e.g., German) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Z">
+            <summary>
+            <c>z</c> on a US keyboard.
+            <c>w</c> on an AZERTY (e.g., French) keyboard.
+            <c>y</c> on a QWERTZ (e.g., German) keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Minus">
+            <summary>
+            <c>-_</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Period">
+            <summary>
+            <c>.&gt;</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Quote">
+            <summary>
+            <c>'"</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Semicolon">
+            <summary>
+            <c>;:</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Slash">
+            <summary>
+            <c>/?</c> on a US keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.AltLeft">
+            <summary>
+            <c>Alt</c>, <c>Option</c> or <c>⌥</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.AltRight">
+            <summary>
+            <c>Alt</c>, <c>Option</c> or <c>⌥</c>.
+            This is labelled <c>AltGr</c> key on many keyboard layouts.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Backspace">
+            <summary>
+            <c>Backspace</c> or <c>⌫</c>.
+            Labelled <c>Delete</c> on Apple keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.CapsLock">
+            <summary>
+            <c>CapsLock</c> or <c>⇪</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ContextMenu">
+            <summary>
+            The application context menu key, which is typically found between the right <c>Meta</c> key
+            and the right <c>Control</c> key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ControlLeft">
+            <summary>
+            <c>Control</c> or <c>⌃</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ControlRight">
+            <summary>
+            <c>Control</c> or <c>⌃</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Enter">
+            <summary>
+            <c>Enter</c> or <c>↵</c>.
+            Labelled <c>Return</c> on Apple keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MetaLeft">
+            <summary>
+            The <c>⊞</c> (Windows), <c>⌘</c>, <c>Command</c> or other OS symbol key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MetaRight">
+            <summary>
+            The <c>⊞</c> (Windows), <c>⌘</c>, <c>Command</c> or other OS symbol key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ShiftLeft">
+            <summary>
+            <c>Shift</c> or <c>⇧</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ShiftRight">
+            <summary>
+            <c>Shift</c> or <c>⇧</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Space">
+            <summary>
+            <c> </c> (space).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Tab">
+            <summary>
+            <c>Tab</c> or <c>⇥</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Convert">
+            <summary>
+            Japanese: <c>変換</c> (henkan).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.KanaMode">
+            <summary>
+            Japanese: <c>カタカナ/ひらがな/ローマ字</c> (katakana/hiragana/romaji).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Lang1">
+            <summary>
+            Korean: HangulMode <c>한/영</c> (han/yeong).
+            Japanese (Mac keyboard): <c>かな</c> (kana).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Lang2">
+            <summary>
+            Korean: Hanja <c>한자</c> (hanja).
+            Japanese (Mac keyboard): <c>英数</c> (eisu).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Lang3">
+            <summary>
+            Japanese (word-processing keyboard): Katakana.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Lang4">
+            <summary>
+            Japanese (word-processing keyboard): Hiragana.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Lang5">
+            <summary>
+            Japanese (word-processing keyboard): Zenkaku/Hankaku.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NonConvert">
+            <summary>
+            Japanese: <c>無変換</c> (muhenkan).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Delete">
+            <summary>
+            <c>⌦</c>. The forward delete key.
+            Note that on Apple keyboards, the key labelled <c>Delete</c> on the main part of the keyboard is
+            <see cref="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Backspace"/>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.End">
+            <summary>
+            <c>End</c> or <c>↘</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Help">
+            <summary>
+            <c>Help</c>.
+            Not present on standard PC keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Home">
+            <summary>
+            <c>Home</c> or <c>↖</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Insert">
+            <summary>
+            <c>Insert</c> or <c>Ins</c>.
+            Not present on Apple keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.PageDown">
+            <summary>
+            <c>Page Down</c>, <c>PgDn</c> or <c>⇟</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.PageUp">
+            <summary>
+            <c>Page Up</c>, <c>PgUp</c> or <c>⇞</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ArrowDown">
+            <summary>
+            <c>↓</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ArrowLeft">
+            <summary>
+            <c>←</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ArrowRight">
+            <summary>
+            <c>→</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ArrowUp">
+            <summary>
+            <c>↑</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumLock">
+            <summary>
+            Numeric keypad <c>Num Lock</c>.
+            On the Mac, this is used for the numpad <c>Clear</c> key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad0">
+            <summary>
+            Numeric keypad <c>0 Ins</c> on a keyboard.
+            <c>0</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad1">
+            <summary>
+            Numeric keypad <c>1 End</c> on a keyboard.
+            <c>1</c> or <c>1 QZ</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad2">
+            <summary>
+            Numeric keypad <c>2 ↓</c> on a keyboard.
+            <c>2 ABC</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad3">
+            <summary>
+            Numeric keypad <c>3 PgDn</c> on a keyboard.
+            <c>3 DEF</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad4">
+            <summary>
+            Numeric keypad <c>4 ←</c> on a keyboard.
+            <c>4 GHI</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad5">
+            <summary>
+            Numeric keypad <c>5</c> on a keyboard.
+            <c>5 JKL</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad6">
+            <summary>
+            Numeric keypad <c>6 →</c> on a keyboard.
+            <c>6 MNO</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad7">
+            <summary>
+            Numeric keypad <c>7 Home</c> on a keyboard.
+            <c>7 PQRS</c> or <c>7 PRS</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad8">
+            <summary>
+            Numeric keypad <c>8 ↑</c> on a keyboard.
+            <c>8 TUV</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPad9">
+            <summary>
+            Numeric keypad <c>9 PgUp</c> on a keyboard.
+            <c>9 WXYZ</c> or <c>9 WXY</c> on a phone or remote control.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadAdd">
+            <summary>
+            Numeric keypad <c>+</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadClear">
+            <summary>
+            Numeric keypad <c>C</c> or <c>AC</c> (All Clear).
+            Also for use with numpads that have a <c>Clear</c> key that is separate from the <c>NumLock</c> key.
+            On the Mac, the numpad <c>Clear</c> key is <see cref="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumLock"/>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadComma">
+            <summary>
+            Numeric keypad <c>,</c> (thousands separator).
+            For locales where the thousands separator is a "." (e.g., Brazil), this key may generate a <c>.</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadDecimal">
+            <summary>
+            Numeric keypad <c>. Del</c>.
+            For locales where the decimal separator is "," (e.g., Brazil), this key may generate a <c>,</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadDivide">
+            <summary>
+            Numeric keypad <c>/</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadEnter">
+            <summary>
+            Numeric keypad <c>Enter</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadEqual">
+            <summary>
+            Numeric keypad <c>=</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadMultiply">
+            <summary>
+            Numeric keypad <c>*</c> on a keyboard.
+            For use with numpads that provide mathematical operations (<c>+</c>, <c>-</c>, <c>*</c> and <c>/</c>).
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadParenLeft">
+            <summary>
+            Numeric keypad <c>(</c>.
+            Found on the Microsoft Natural Keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadParenRight">
+            <summary>
+            Numeric keypad <c>)</c>.
+            Found on the Microsoft Natural Keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.NumPadSubtract">
+            <summary>
+            Numeric keypad <c>-</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Escape">
+            <summary>
+            <c>Esc</c> or <c>⎋</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F1">
+            <summary>
+            <c>F1</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F2">
+            <summary>
+            <c>F2</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F3">
+            <summary>
+            <c>F3</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F4">
+            <summary>
+            <c>F4</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F5">
+            <summary>
+            <c>F5</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F6">
+            <summary>
+            <c>F6</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F7">
+            <summary>
+            <c>F7</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F8">
+            <summary>
+            <c>F8</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F9">
+            <summary>
+            <c>F9</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F10">
+            <summary>
+            <c>F10</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F11">
+            <summary>
+            <c>F11</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F12">
+            <summary>
+            <c>F12</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F13">
+            <summary>
+            <c>F13</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F14">
+            <summary>
+            <c>F14</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F15">
+            <summary>
+            <c>F15</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F16">
+            <summary>
+            <c>F16</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F17">
+            <summary>
+            <c>F17</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F18">
+            <summary>
+            <c>F18</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F19">
+            <summary>
+            <c>F19</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F20">
+            <summary>
+            <c>F20</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F21">
+            <summary>
+            <c>F21</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F22">
+            <summary>
+            <c>F22</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F23">
+            <summary>
+            <c>F23</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.F24">
+            <summary>
+            <c>F24</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.PrintScreen">
+            <summary>
+            <c>PrtScr SysRq</c> or <c>Print Screen</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.ScrollLock">
+            <summary>
+            <c>Scroll Lock</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Pause">
+            <summary>
+            <c>Pause Break</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserBack">
+            <summary>
+            Browser <c>Back</c>.
+            Some laptops place this key to the left of the <c>↑</c> key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserFavorites">
+            <summary>
+            Browser <c>Favorites</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserForward">
+            <summary>
+            Browser <c>Forward</c>.
+            Some laptops place this key to the right of the <c>↑</c> key.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserHome">
+            <summary>
+            Browser <c>Home</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserRefresh">
+            <summary>
+            Browser <c>Refresh</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserSearch">
+            <summary>
+            Browser <c>Search</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.BrowserStop">
+            <summary>
+            Browser <c>Stop</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Eject">
+            <summary>
+            <c>Eject</c> or <c>⏏</c>.
+            This key is placed in the function section on some Apple keyboards.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.LaunchApp1">
+            <summary>
+            <c>App 1</c>.
+            Sometimes labelled <c>My Computer</c> on the keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.LaunchApp2">
+            <summary>
+            <c>App 2</c>.
+            Sometimes labelled <c>Calculator</c> on the keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.LaunchMail">
+            <summary>
+            <c>Mail</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MediaPlayPause">
+            <summary>
+            Media <c>Play/Pause</c> or <c>⏵⏸</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MediaSelect">
+            <summary>
+            Media <c>Select</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MediaStop">
+            <summary>
+            Media <c>Stop</c> or <c>⏹</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MediaTrackNext">
+            <summary>
+            Media <c>Next</c> or <c>⏭</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.MediaTrackPrevious">
+            <summary>
+            Media <c>Previous</c> or <c>⏮</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Power">
+            <summary>
+            <c>Power</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Sleep">
+            <summary>
+            <c>Sleep</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.AudioVolumeDown">
+            <summary>
+            <c>Volume Down</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.AudioVolumeMute">
+            <summary>
+            <c>Mute</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.AudioVolumeUp">
+            <summary>
+            <c>Volume Up</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.WakeUp">
+            <summary>
+            <c>Wake Up</c>.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Again">
+            <summary>
+            <c>Again</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Copy">
+            <summary>
+            <c>Copy</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Cut">
+            <summary>
+            <c>Cut</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Find">
+            <summary>
+            <c>Find</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Open">
+            <summary>
+            <c>Open</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Paste">
+            <summary>
+            <c>Paste</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Props">
+            <summary>
+            <c>Props</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Select">
+            <summary>
+            <c>Select</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+        <member name="F:Avalonia.Remote.Protocol.Input.PhysicalKey.Undo">
+            <summary>
+            <c>Undo</c>.
+            Legacy.
+            Found on Sun’s USB keyboard.
+            </summary>
+        </member>
+    </members>
+</doc>
