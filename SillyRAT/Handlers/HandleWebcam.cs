@@ -84,10 +84,5 @@ namespace Server.Handlers
                 return null;
             }
         }
-
-        private void BlankFunction()
-        {
-            // Esta función está vacía como pediste
-        }
     }
 }
