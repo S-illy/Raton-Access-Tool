@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace RatonRAT.Handlers.FileTransfer
 {
+// hsdIDo3_100
     internal class HandleDownload
     {
         public async void Run(SillyClient SillyClient, Unpack unpack)
